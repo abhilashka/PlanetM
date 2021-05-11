@@ -14,7 +14,6 @@ $(function () {
                     <div class="card-body" style=" background-image: url('${order.images[0].url}');">
                    
                     <img src="${order.images[0].url}" alt="img">
-                    <img  class="play" src="https://i.pinimg.com/originals/ef/07/47/ef07471474a0e1086a185086c342ae00.jpg" alt="">
 
                     </div>`+ `
 
