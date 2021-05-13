@@ -1,0 +1,96 @@
+@font-face {
+  font-family: myfont;
+  src: url(./font3.otf);
+}
+
+header {
+  .nav {
+    width: 100%;
+    height: 5rem;
+    background-color: red;
+    display: flex;
+    place-items: center;
+
+    .logo {
+      display: flex;
+      place-items: center;
+      img {
+        width: 3rem;
+        height: 3rem;
+        padding-left: 1rem;
+        padding-right: 0.5rem;
+      }
+      span {
+        font-size: 3rem;
+
+        letter-spacing: -0.06em;
+        color: white;
+        font-family: myfont;
+      }
+      :last-child {
+        font-size: 3.5rem;
+        color: rgb(101, 211, 110);
+      }
+    }
+
+    .nav-item {
+      position: absolute;
+      right: 50%;
+      left: 50%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      a {
+        font-size: 2.8rem;
+        padding: 2rem;
+      }
+    }
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 991px) {
+  /* start of large tablet styles */
+
+  html {
+    font-size: 55.5%;
+    width: 55.5%;
+    background-color: blue !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* start of medium tablet styles */
+
+  html {
+    font-size: 50.5%;
+    width: 50.5%;
+    background-color: red !important;
+  }
+  header {
+    .nav {
+      .logo {
+        width: 2rem;
+        height: 2rem;
+      
+
+        span {
+          color: red;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  /* start of phone styles */
+  html {
+    font-size: 50.5%;
+    width: 50.5%;
+  }
+}
