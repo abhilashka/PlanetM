@@ -1,0 +1,104 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  width: auto;
+  height: auto;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .row::-webkit-scrollbar {
+  display: none;
+}
+
+.container .row .card {
+  margin: 10px;
+}
+
+.container .row .card .card-body {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+.container .row .card .card-body .image-logo {
+  display: -ms-grid;
+  display: grid;
+  width: 150px;
+  height: 150px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: inset 27px 27px 54px #ffffff7e, inset -27px -27px 54px #ffffff7e;
+          box-shadow: inset 27px 27px 54px #ffffff7e, inset -27px -27px 54px #ffffff7e;
+  background-blend-mode: lighten;
+}
+
+.container .row .card .card-body .image-logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.container .row .card .card-footer {
+  font-size: 1rem;
+}
+
+.container .row .card .card-footer .title {
+  font-size: 1.5rem;
+}
+
+.container .container-headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.container .container-headline .title {
+  font-size: 2rem;
+}
+
+.container .container-headline .sub-title {
+  font-size: 1rem;
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(../../font3.otf);
+}
+
+* {
+  font-family: myFirstFont;
+}
+
+html {
+  font-size: 62.5%;
+  color: white;
+  background-color: black;
+}
+/*# sourceMappingURL=container.css.map */
