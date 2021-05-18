@@ -1,0 +1,39 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(./font3.otf);
+}
+
+* {
+  font-family: myFirstFont;
+}
+
+.discover-container {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  .item {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+    span {
+      position: relative;
+      top: 30px;
+      margin-left: 10px;
+      font-size: 2rem;
+      color: white;
+      font-weight: 100;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
