@@ -1,0 +1,59 @@
+.player {
+  margin-top: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.player .menu {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.player .track-details .title {
+  font-size: 5rem;
+}
+
+.player .track-details .artist {
+  font-size: 2rem;
+}
+
+.player .track-progress .progress-bar {
+  width: 300px;
+}
+
+.player .track-controls {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
+  height: auto;
+}
+
+.player .track-controls .audio-control .control {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+.player .track-controls .audio-control .play {
+  fill: black;
+  background-color: white;
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: black;
+  color: white;
+}
+/*# sourceMappingURL=playground.css.map */
