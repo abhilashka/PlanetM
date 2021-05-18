@@ -1,6 +1,6 @@
 @font-face {
   font-family: myFirstFont;
-  src: url(./font3.otf);
+  src: url(../../font3.otf);
 }
 
 * {
@@ -30,10 +30,13 @@
     img {
       width: 200px;
       height: 200px;
+    border-radius: 15px;
+
     }
   }
 }
 
 html {
   font-size: 62.5%;
+  background-color: black;
 }
