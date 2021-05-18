@@ -1,0 +1,129 @@
+{
+  "playlist": [
+    {
+      "id": 1,
+      "title": "playlist-1",
+      "description": "this is playlist-1",
+      "tracks": [
+        {
+          "title": "hello"
+        },
+        {
+          "title": "all i want"
+        },
+        {
+          "title": "burnout"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "playlist-2",
+      "description": "this is playlist-2",
+      "tracks": [
+        {
+          "title": "hello"
+        },
+        {
+          "title": "all i want"
+        },
+        {
+          "title": "burnout"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "playlist-3",
+      "description": "this is playlist-3",
+      "tracks": [
+        {
+          "title": "hello"
+        },
+        {
+          "title": "all i want"
+        },
+        {
+          "title": "burnout"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "playlist-4",
+      "description": "this is playlist-4",
+      "tracks": [
+        {
+          "title": "hello"
+        },
+        {
+          "title": "all i want"
+        },
+        {
+          "title": "burnout"
+        }
+      ]
+    },
+    {
+      "id": "playlist-4",
+      "title": "playlist-4",
+      "description": "this is playlist-4",
+      "tracks": [
+        {
+          "title": "hello"
+        },
+        {
+          "title": "all i want"
+        },
+        {
+          "title": "burnout"
+        }
+      ]
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "name": "s",
+      "email": "shyamdafale@gmail.com",
+      "favc": "s",
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "title": "iphone",
+      "description": "hu",
+      "id": 14
+    },
+    {
+      "title": "iphone2",
+      "description": "hu",
+      "id": 15
+    },
+    {
+      "title": "iphone5",
+      "description": "a",
+      "id": 16
+    }
+  ]
+}

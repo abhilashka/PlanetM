@@ -1,0 +1,18 @@
+.playlist-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.playlist-container .create {
+  cursor: pointer;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #353434;
+  width: 200px;
+  height: 200px;
+}
+/*# sourceMappingURL=playground.css.map */
