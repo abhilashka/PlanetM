@@ -17,6 +17,7 @@
     width: 200px;
     height: 200px;
     margin: 10px;
+    
     cursor: pointer;
     span {
       position: relative;
@@ -32,6 +33,14 @@
       height: 200px;
     border-radius: 15px;
 
+
+    }
+
+    &:hover{
+      
+
+box-shadow: 5px 23px 47px #212121;
+       
     }
   }
 }

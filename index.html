@@ -41,8 +41,9 @@
         </div>
         <div class="nav-item">
 
-            <span>Home</span>
-            <svg viewBox="0 0 24 24" class="nav-item-icon">
+            <span onclick="home()">Home</span>
+
+            <svg viewBox="0 0 24 24" class="nav-item-icon" onclick="home()">
                 <g>
                     <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z">
                         Home
@@ -52,12 +53,17 @@
 
 
 
-            <span>Explore</span>
+            <span onclick="explore()">Explore</span>
 
-            <svg viewBox="0 0 24 24" class="nav-item-icon">
+
+
+
+
+
+            <svg viewBox="0 0 24 24" class="nav-item-icon" onclick="explore()">
                 <g>
-                    <path
-                        d="M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1c.61 0 1.1-.49 1.1-1.1s-.49-1.1-1.1-1.1zM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z">
+                    <path d=" M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1c.61 0 1.1-.49 1.1-1.1s-.49-1.1-1.1-1.1zM12
+                2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z">
                     </path>
                     <path d="M0 0h24v24H0z" fill="none"></path>
                 </g>
@@ -65,10 +71,10 @@
 
 
 
-            <span>Library</span>
+            <span onclick="library()">Library</span>
 
             <!-- Library -->
-            <svg viewBox="0 0 24 24" class="nav-item-icon">
+            <svg viewBox="0 0 24 24" class="nav-item-icon" onclick="library()">
                 <g>
                     <path d="M0 0h24v24H0z" fill="none"></path>
                     <path
@@ -163,6 +169,8 @@
     <script src="./script/script.js"></script>
 
     <script src="./script.js"></script>
+
+    <script src="./script/header.js"></script>
 
 </body>
 

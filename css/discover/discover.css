@@ -39,6 +39,11 @@
   border-radius: 15px;
 }
 
+.discover-container .item:hover {
+  -webkit-box-shadow: 5px 23px 47px #212121;
+          box-shadow: 5px 23px 47px #212121;
+}
+
 html {
   font-size: 62.5%;
   background-color: black;
