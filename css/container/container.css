@@ -43,6 +43,7 @@
 .container .row .card .card-body .image-logo {
   display: -ms-grid;
   display: grid;
+  border-radius: 3px;
   width: 150px;
   height: 150px;
   -webkit-box-pack: center;
@@ -51,12 +52,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: inset 27px 27px 54px #ffffff7e, inset -27px -27px 54px #ffffff7e;
-          box-shadow: inset 27px 27px 54px #ffffff7e, inset -27px -27px 54px #ffffff7e;
+  -webkit-box-shadow: 35px 28px 100px #83838382 inset, -78px 28px 100px #83838382 inset;
+          box-shadow: 35px 28px 100px #83838382 inset, -78px 28px 100px #83838382 inset;
   background-blend-mode: lighten;
 }
 
 .container .row .card .card-body .image-logo img {
+  border-radius: 2px;
   width: 100px;
   height: 100px;
 }
