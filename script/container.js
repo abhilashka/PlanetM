@@ -67,7 +67,7 @@ $(function () {
 
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/posts',
+        url: 'http://localhost:3000/newrealese',
         port: 3000,
         success: function (songs) {
             $.each(songs, function (i, song) {

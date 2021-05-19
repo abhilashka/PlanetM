@@ -17,7 +17,7 @@ margin: 20px;
 
     .card {
       margin: 10px;
-
+      cursor: pointer;
       .card-body {
         display: grid;
         justify-content: center;
@@ -43,6 +43,9 @@ margin: 20px;
 
       .card-footer {
         font-size: 1rem;
+        &:hover{
+          text-decoration: underline;
+        }
         .title {
           font-size: 1.5rem;
         }
@@ -56,10 +59,16 @@ margin: 20px;
 
     .title {
       font-size: 2rem;
+      cursor: pointer;
+
+      &:hover{
+        text-decoration: underline;
+      }
     }
     .sub-title {
       font-size: 1rem;
       align-content: baseline;
+      cursor: pointer;
     }
   }
 }

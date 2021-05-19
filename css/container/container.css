@@ -27,6 +27,7 @@
 
 .container .row .card {
   margin: 10px;
+  cursor: pointer;
 }
 
 .container .row .card .card-body {
@@ -64,6 +65,10 @@
   font-size: 1rem;
 }
 
+.container .row .card .card-footer:hover {
+  text-decoration: underline;
+}
+
 .container .row .card .card-footer .title {
   font-size: 1.5rem;
 }
@@ -78,12 +83,18 @@
 
 .container .container-headline .title {
   font-size: 2rem;
+  cursor: pointer;
+}
+
+.container .container-headline .title:hover {
+  text-decoration: underline;
 }
 
 .container .container-headline .sub-title {
   font-size: 1rem;
   -ms-flex-line-pack: baseline;
       align-content: baseline;
+  cursor: pointer;
 }
 
 @font-face {
