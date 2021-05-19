@@ -34,7 +34,7 @@ $(function () {
                 // $songs.append('<div class="card md-col-2" style="width: 18rem;">  <div class="card-body"> <div class="card-title"> <h4>' + song.title + '</h4><div class="card-text"> ' + song.author + '</div>' + ' </div></div> </div>');
                 $playlist.append(
                     `
-                   <div>${song}</div>
+                   <div class="playlist-item">${song.title}</div>
 
                     `)
             });

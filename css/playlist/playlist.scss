@@ -1,0 +1,29 @@
+.playlist-container {
+  background-color: black;
+  color: white;
+  display: grid;
+  justify-content: start;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  .playlist-item {
+    cursor: pointer;
+
+    background-color: rgb(34, 34, 34);
+    margin: 10px;
+  }
+
+  .create {
+    cursor: pointer;
+
+    align-items: flex-start;
+    background-color: rgb(53, 52, 52);
+
+    width: 200px;
+    height: 200px;
+  }
+}
+
+html {
+  background-color: black;
+}
