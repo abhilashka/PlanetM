@@ -73,7 +73,7 @@ let ajax1 = $.ajax({
     })     
     
 
-
+//This code is for search the music in the searcharea
     $("#searchmusic").on("keyup",function()
     {
        let key = $(this).val().toLowerCase();
@@ -95,11 +95,225 @@ let ajax1 = $.ajax({
  // });   
 
 
+
+ //this API is for fetching the english songs
+ 
+  $(document).ready(function () {
     
+   $("#format").change(function(){
+       if($("#format").val()=='English')
+       {
+        
+    $.ajax({
+      type: "GET",
+       url: "http://localhost:3000/english/",
+       dataType: "json",
+       async: true,
+      success: function (data) {
+        console.log(data);
+        let englishsongs = "";
+        $.each(data, function (i, v) {
+
+          
+           englishsongs += `
+           <div class="english-box">
+           <div id=${v.url}>
+           <div class="song-image">
+           <img class="img-fluid" src=${v.img} />
+           </div>
+           <div class="song-title">
+                <strong><span>${v.name}</span></strong>
+                <p>${v.id}</p>
+            </div>
+            </div>
+            </div>
+           `; 
+        });
+         $(".english-inside-main-content").append(englishsongs);
+        
+       },
+        
+      
+       error:function(){
+         console.log("songs are not available");
+       },
+      
+   
+   });
+}
+
+    
+   
+ });
+
+ });
+
+ //this API is for fetching the hindi songs
+
+ $(document).ready(function () {
+    
+    $("#format").change(function(){
+        if($("#format").val()=='Hindi')
+        {
+         
+     $.ajax({
+       type: "GET",
+        url: "http://localhost:3000/hindi/",
+        dataType: "json",
+        async: true,
+       success: function (data) {
+         console.log(data);
+         let hindisongs = "";
+         $.each(data, function (i, v) {
+ 
+           
+            hindisongs += `
+            <div class="english-box">
+            <div id=${v.url}>
+            <div class="song-image">
+            <img class="img-fluid" src=${v.img} />
+            </div>
+            <div class="song-title">
+                 <strong><span>${v.name}</span></strong>
+                 <p>${v.id}</p>
+             </div>
+             </div>
+             </div>
+            `; 
+         });
+          $(".hindi-inside-main-content").append(hindisongs);
+         
+        },
+         
+       
+        error:function(){
+          console.log("songs are not available");
+        },
+       
+    
+    });
+ }
+ 
+     
+    
+  });
+ 
+  });
+ 
 
 
 
 
 
+ //this API is for fetching the marathi songs
 
+ $(document).ready(function () {
+    
+    $("#format").change(function(){
+        if($("#format").val()=='Marathi')
+        {
+         
+     $.ajax({
+       type: "GET",
+        url: "http://localhost:3000/marathi/",
+        dataType: "json",
+        async: true,
+       success: function (data) {
+         console.log(data);
+         let marathisongs = "";
+         $.each(data, function (i, v) {
+ 
+           
+            marathisongs += `
+            <div class="english-box">
+            <div id=${v.url}>
+            <div class="song-image">
+            <img class="img-fluid" src=${v.img} />
+            </div>
+            <div class="song-title">
+                 <strong><span>${v.name}</span></strong>
+                 <p>${v.id}</p>
+             </div>
+             </div>
+             </div>
+            `; 
+         });
+          $(".marathi-inside-main-content").append(marathisongs);
+         
+        },
+         
+       
+        error:function(){
+          console.log("songs are not available");
+        },
+       
+    
+    });
+ }
+ 
+     
+    
+  });
+ 
+  });
+ 
+
+
+
+
+ //this API is for fetching the punjabi songs
+
+ $(document).ready(function () {
+    
+    $("#format").change(function(){
+        if($("#format").val()=='Punjabi')
+        {
+         
+     $.ajax({
+       type: "GET",
+        url: "http://localhost:3000/punjabi/",
+        dataType: "json",
+        async: true,
+       success: function (data) {
+         console.log(data);
+         let punjabisongs = "";
+         $.each(data, function (i, v) {
+ 
+           
+            punjabisongs += `
+            <div class="english-box">
+            <div id=${v.url}>
+            <div class="song-image">
+            <img class="img-fluid" src=${v.img} />
+            </div>
+            <div class="song-title">
+                 <strong><span>${v.name}</span></strong>
+                 <p>${v.id}</p>
+             </div>
+             </div>
+             </div>
+            `; 
+         });
+          $(".punjabi-inside-main-content").append(punjabisongs);
+         
+        },
+         
+       
+        error:function(){
+          console.log("songs are not available");
+        },
+       
+    
+    });
+ }
+ 
+     
+    
+  });
+ 
+  });
+ 
+
+
+ 
  

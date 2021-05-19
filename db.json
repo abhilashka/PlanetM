@@ -50,7 +50,129 @@
         "artist": "Arijit Singh"
       }
       
+    ],
+
+    "english": [
+      {
+       "id": 1,
+       "url": "../assests/Audio/english/music1.mp3",
+       "name": "music1",
+       "language": "English",
+       "img":"https://img.icons8.com/color/96/000000/snitch.png",
+       "artist": "Post Malone"
+
+     },
+     {
+      "id": 2,
+      "url": "../assests/Audio/english/music2.mp3",
+      "name": "music2",
+      "language": "English",
+      "img":"https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Post Malone"
+
+     },
+     {
+      "id": 3,
+      "url": "../assests/Audio/english/music3.mp3",
+      "name": "music3",
+      "language": "English",
+      "img":"https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Post Malone"
+
+     }    
+    ],
+
+    "hindi": [
+      {
+       "id": 1,
+       "url": "../assests/Audio/hindi/music1.mp3",
+       "name": "music1",
+       "language": "Hindi",
+       "img":"https://img.icons8.com/color/96/000000/snitch.png",
+       "artist": "Arijit Singh"
+
+     },
+     {
+      "id": 2,
+      "url": "../assests/Audio/hindi/music2.mp3",
+      "name": "music2",
+      "language": "Hindi",
+      "img":"https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Arijit Singh"
+
+     },
+     {
+      "id": 3,
+      "url": "../assests/Audio/hindi/music3.mp3",
+      "name": "music3",
+      "language": "hindi",
+      "img":"https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Arijit Singh"
+
+     }    
+    ],
+
+    "marathi": [
+      {
+       "id": 1,
+       "url": "../assests/Audio/marathi/music1.mp3",
+       "name": "music1",
+       "language": "Marathi",
+       "img":"https://img.icons8.com/color/96/000000/snitch.png",
+       "artist": "Ajay Gogavale"
+
+     },
+     {
+      "id": 2,
+      "url": "../assests/Audio/marathi/music2.mp3",
+      "name": "music2",
+      "language": "Marathi",
+      "img":"https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Ajay Gogavale"
+
+     },
+     {
+      "id": 3,
+      "url": "../assests/Audio/marathi/music3.mp3",
+      "name": "music3",
+      "language": "Marathi",
+      "img":"https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Ajay Gogavale"
+
+     }    
+    ],
+
+
+    "punjabi": [
+      {
+       "id": 1,
+       "url": "../assests/Audio/punjabi/music1.mp3",
+       "name": "music1",
+       "language": "Punjabi",
+       "img":"https://img.icons8.com/color/96/000000/snitch.png",
+       "artist": "Jassi Dhillon"
+
+     },
+     {
+      "id": 2,
+      "url": "../assests/Audio/punjabi/music2.mp3",
+      "name": "music2",
+      "language": "Punjabi",
+      "img":"https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Jassi Dhillon"
+
+     },
+     {
+      "id": 3,
+      "url": "../assests/Audio/punjabi/music3.mp3",
+      "name": "music3",
+      "language": "Punjabi",
+      "img":"https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Jassi Dhillon"
+
+     }    
     ]
+     
   }    
 
  

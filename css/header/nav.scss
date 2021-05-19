@@ -48,7 +48,7 @@ html {
 
   .nav-item:nth-child(2) {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     column-gap: 4rem;
 
     span {
@@ -149,3 +149,19 @@ html {
     }
   }
 }
+
+.design-container{
+  display: none;
+  background-color: black;
+}
+// .select-container{
+//        display: flex;
+//        align-items: center;
+//        justify-content: center;
+//        margin: auto;
+//        width: 30%;
+//        border: 3px solid #73AD21;
+//        padding: 10px;
+//        background-color: darkgray;
+// }
+
