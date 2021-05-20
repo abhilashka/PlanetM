@@ -1,4 +1,5 @@
-html, * {
+html,
+* {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -35,7 +36,8 @@ body .btn-home-register:hover {
           justify-content: center;
 }
 
-.modal-footer #login-btn, .modal-footer #registration-btn {
+.modal-footer #login-btn,
+.modal-footer #registration-btn {
   width: 100%;
   margin-top: 10px;
   height: 2.8rem;
@@ -45,7 +47,7 @@ body .btn-home-register:hover {
 .modal {
   height: 100vh;
   background-color: #000c06;
-  opacity: 72%;
+  opacity: 100%;
 }
 
 .modal .modal-dialog {
@@ -98,7 +100,7 @@ body .btn-home-register:hover {
   margin-top: 0.3rem;
   width: 100%;
   font-size: 1rem;
-  color: #C62828;
+  color: #c62828;
   background: rgba(255, 0, 0, 0.1);
   text-align: center;
   padding: 0.3rem 0.5rem;
