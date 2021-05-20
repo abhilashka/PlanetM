@@ -4,8 +4,7 @@
   height: auto;
 
   grid-template-rows: auto 1fr;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 20px;
   .row {
     display: flex;
 
@@ -18,24 +17,25 @@
 
     .card {
       margin: 10px;
-
+      cursor: pointer;
       .card-body {
         display: grid;
         justify-content: center;
         grid-template-columns: auto;
         .image-logo {
           display: grid;
-
+          border-radius: 3px;
           width: 150px;
           height: 150px;
           justify-content: center;
 
           align-items: center;
-          box-shadow: inset 27px 27px 54px #ffffff7e,
-            inset -27px -27px 54px #ffffff7e;
+          box-shadow: 35px 28px 100px #83838382 inset,
+            -78px 28px 100px #83838382 inset;
 
           background-blend-mode: lighten;
           img {
+            border-radius: 2px;
             width: 100px;
             height: 100px;
           }
@@ -44,6 +44,9 @@
 
       .card-footer {
         font-size: 1rem;
+        &:hover {
+          text-decoration: underline;
+        }
         .title {
           font-size: 1.5rem;
         }
@@ -57,10 +60,16 @@
 
     .title {
       font-size: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
     .sub-title {
       font-size: 1rem;
       align-content: baseline;
+      cursor: pointer;
     }
   }
 }

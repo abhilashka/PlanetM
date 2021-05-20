@@ -4,7 +4,7 @@ $(function () {
     $.ajax({
         type: 'GET',
 
-        url: 'https://api.spotify.com/v1/browse/categories?limit=50',
+        url: 'http://localhost:3000/categories',
         Accept: 'application/json',
 
 
@@ -13,9 +13,9 @@ $(function () {
             'Authorization': `Bearer ${token}`,
         },
         success: function (data) {
-            console.log(data.categories.items)
+            console.log(data.items)
 
-            $.each(data.categories.items, function (i, song) {
+            $.each(data.items, function (i, song) {
                 $songs.append(
 
                     `

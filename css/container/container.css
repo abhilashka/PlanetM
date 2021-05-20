@@ -4,9 +4,8 @@
   width: auto;
   height: auto;
   -ms-grid-rows: auto 1fr;
-  grid-template-rows: auto 1fr;
-  margin-left: 15px;
-  margin-right: 15px;
+      grid-template-rows: auto 1fr;
+  margin: 20px;
 }
 
 .container .row {
@@ -15,11 +14,11 @@
   display: flex;
   overflow-x: auto;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container .row::-webkit-scrollbar {
@@ -28,41 +27,50 @@
 
 .container .row .card {
   margin: 10px;
+  cursor: pointer;
 }
 
 .container .row .card .card-body {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-grid-columns: auto;
-  grid-template-columns: auto;
+      grid-template-columns: auto;
 }
 
 .container .row .card .card-body .image-logo {
   display: -ms-grid;
   display: grid;
+  border-radius: 3px;
   width: 150px;
   height: 150px;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-shadow: inset 27px 27px 54px #ffffff7e, inset -27px -27px 54px #ffffff7e;
-  box-shadow: inset 27px 27px 54px #ffffff7e, inset -27px -27px 54px #ffffff7e;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: inset 27px 27px 54px #ffffff7e,
+ inset -27px -27px 54px #ffffff7e;
+          box-shadow: inset 27px 27px 54px #ffffff7e,
+ inset -27px -27px 54px #ffffff7e;
   background-blend-mode: lighten;
 }
 
 .container .row .card .card-body .image-logo img {
+  border-radius: 2px;
   width: 100px;
   height: 100px;
 }
 
 .container .row .card .card-footer {
   font-size: 1rem;
+}
+
+.container .row .card .card-footer:hover {
+  text-decoration: underline;
 }
 
 .container .row .card .card-footer .title {
@@ -74,17 +82,23 @@
   display: -ms-flexbox;
   display: flex;
   -ms-grid-columns: auto auto;
-  grid-template-columns: auto auto;
+      grid-template-columns: auto auto;
 }
 
 .container .container-headline .title {
   font-size: 2rem;
+  cursor: pointer;
+}
+
+.container .container-headline .title:hover {
+  text-decoration: underline;
 }
 
 .container .container-headline .sub-title {
   font-size: 1rem;
   -ms-flex-line-pack: baseline;
-  align-content: baseline;
+      align-content: baseline;
+  cursor: pointer;
 }
 
 @font-face {
@@ -101,5 +115,4 @@ html {
   color: white;
   background-color: black;
 }
-
 /*# sourceMappingURL=container.css.map */
