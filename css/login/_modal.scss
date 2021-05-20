@@ -22,18 +22,36 @@ body{
     }
 }
 
+.modal-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+    #login-btn,#registration-btn{
+        width: 100%;
+        margin-top: 10px    ;
+        height: 2.8rem;
+        font-size: 1.1rem;
+        
+    }
+
+}
 
 .modal{
     height: 100vh;
-    overflow-y: auto;
+  //  overflow-y: auto;
     .modal-dialog{
         overflow-y: initial !important
     }
+    background-color: #000c06;
+    opacity: 72%;
+    
 }
 
 .modal-content {
     max-width: 28rem;
+    border: 2px solid #ffffff ;
+    border-radius: 12px;
     padding: 1rem;
     position: relative;
     .modal-header {
@@ -54,17 +72,21 @@ body{
             color: #130f40;
             width: 100%;
         }
+        
     }
-    
+    label{
+            color: black;
+            font-weight: bold;
+        }
 
     .modal-body {
-        #username_error_msg,
-        #password_error_msg,
-        #fullname_error_msg,
-        #email_error_msg,
-        #phone_error_msg,
-        #passw_error_msg,
-        #confpass_error_msg {
+        #error-user,
+        #error-password,
+        #error-name,
+        #error-email,
+        #error-phone,
+        #error-reg-pass,
+        #error-reg-confpass {
             margin-top: 0.3rem;
             width: 100%;
             font-size: 1rem;
@@ -73,7 +95,7 @@ body{
             text-align: center;
             padding: 0.3rem 0.5rem;
             border-radius: 0.2rem;
-            border: 0.1rem solid #EF9A9A ;
+            border: 0.1rem solid #af0808 ;
             display: none;
         }
     }
@@ -98,7 +120,7 @@ body{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin: 3rem 0 1rem 0;
+        margin: 2rem 0 0 0;
         display: block;
         height: 2.8rem;
         width: 100%;
@@ -106,12 +128,12 @@ body{
         color: white;
         outline: none;
         font-weight: bold;
-        background: chartreuse;
+        background: limegreen;
         border-radius: 0.2rem;
         border: 0.1rem solid black;
         transition: 0.5s;
         &:hover {
-            background: limegreen;
+            background: chartreuse;
         }
     }
 }
