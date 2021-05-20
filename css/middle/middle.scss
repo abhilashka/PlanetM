@@ -39,11 +39,11 @@
   }
 }
 
-html {
+.conatiner {
   font-size: 63.5%;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   html {
     font-size: 53.5%;
   }
