@@ -1828,7 +1828,11 @@
           "uri": "spotify:artist:1CoZyIx7UvdxT5c8UkMzHd"
         }
       ],
-      "available_markets": ["AD", "FR", "MC"],
+      "available_markets": [
+        "AD",
+        "FR",
+        "MC"
+      ],
       "external_urls": {
         "spotify": "https://open.spotify.com/album/43kI3W0iizaUyE9PrzGq1j"
       },
@@ -2692,7 +2696,6 @@
     "previous": null,
     "total": 50
   },
-
   "playlist": [
     {
       "id": 1,
@@ -2773,6 +2776,11 @@
           "title": "burnout"
         }
       ]
+    },
+    {
+      "title": "new ",
+      "description": "new",
+      "id": 5
     }
   ]
 }
