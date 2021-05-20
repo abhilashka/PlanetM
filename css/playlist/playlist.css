@@ -12,6 +12,8 @@
 
 .playlist-container .playlist-item {
   cursor: pointer;
+  text-align: center;
+  font-size: 24px;
   background-color: #222222;
   margin: 10px;
 }
