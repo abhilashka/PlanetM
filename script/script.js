@@ -74,6 +74,7 @@ let ajax1 = $.ajax({
     
 
 //This code is for search the music in the searcharea
+    
     $("#searchmusic").on("keyup",function()
     {
        let key = $(this).val().toLowerCase();
@@ -94,12 +95,41 @@ let ajax1 = $.ajax({
 
  // });   
 
+ //After clicked on search button
+
+
+
+//  $(document).ready(function() {
+//   console.log("hello")
+  // Search
+  function clickme(){
+  // $('.xyz').click(function() {
+    $("#searchmusic").show();
+    console.log("hello")
+
+  }
+    // if()
+    // {
+    //   $(this).addClass('search');
+    //   $("#searchmusic").show();
+    // }
+    // else
+    // {
+    //   $("#searchmusic").hide();
+    // }
+  // });
+  
+
+  
+
+
 
 
  //this API is for fetching the english songs
  
   $(document).ready(function () {
     
+    $('#searchmusic').hide()
    $("#format").change(function(){
        if($("#format").val()=='English')
        {
@@ -315,5 +345,4 @@ let ajax1 = $.ajax({
  
 
 
- 
  
