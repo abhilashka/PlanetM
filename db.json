@@ -1,19 +1,11 @@
 {
-  "posts": [
+  "songs": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      
+      "title": "interlude",
+      "artist": "J.cole",
+      "length":"3:50"
+      
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
