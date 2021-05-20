@@ -22,7 +22,7 @@ html {
   width: 100%;
   padding: 1rem;
   border-bottom: 2px solid rgba(29, 29, 29);
-
+height: auto;
   .nav-item {
     justify-content: center;
     align-self: center;
@@ -49,6 +49,7 @@ html {
   .nav-item:nth-child(2) {
     display: grid;
     grid-template-columns: repeat(5, auto);
+    grid-template-rows:auto auto;
     column-gap: 4rem;
 
     span {
@@ -60,6 +61,7 @@ html {
         color: white;
       }
     }
+    
     svg {
       display: none;
     }
