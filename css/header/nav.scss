@@ -48,7 +48,8 @@ html {
 
   .nav-item:nth-child(2) {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: auto auto;
     column-gap: 4rem;
 
     span {
@@ -60,6 +61,7 @@ html {
         color: white;
       }
     }
+
     svg {
       display: none;
     }
@@ -150,14 +152,23 @@ html {
   }
 }
 
-
-
-
-
-.profile{
+.profile {
   display: flex;
   justify-content: space-around;
-  .btn{
-
+  .btn {
   }
 }
+.design-container {
+  display: none;
+  background-color: black;
+}
+// .select-container{
+//        display: flex;
+//        align-items: center;
+//        justify-content: center;
+//        margin: auto;
+//        width: 30%;
+//        border: 3px solid #73AD21;
+//        padding: 10px;
+//        background-color: darkgray;
+// }

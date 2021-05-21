@@ -1,0 +1,67 @@
+* {
+  font-family: myFirstFont, Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic Pro, Meiryo, MS Gothic, sans-serif;
+}
+
+.inside-main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-list {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 400px;
+  background-color: black;
+  color: white;
+}
+
+.menu-list .menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menu-list .menu-item h1 {
+  font-size: 50px;
+}
+
+.menu-list .menu-item ul {
+  border: 1px solid black;
+  color: #ecb8b8;
+  font-size: 30px;
+  list-style-type: none;
+}
+
+.menu-list .menu-item ul li a {
+  color: white;
+  font-size: 40px;
+}
+
+.menu-list .menu-item ul li .dropdown-menu .dropdown-item {
+  color: white;
+}
+
+.menu-list .menu-item ul li .dropdown-menu .dropdown-item {
+  background-color: black;
+  width: 233px;
+}
+
+body {
+  background-color: black;
+}
+/*# sourceMappingURL=language.css.map */
