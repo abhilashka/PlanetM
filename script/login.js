@@ -1,20 +1,28 @@
-
+let logged_in = false;
 $(function () {
-    $("#username_error_msg").hide();
-    $("#password_error_msg").hide();
-    $("#fullname_error_msg").hide();
-    $("#email_error_msg").hide();
-    $("#phone_error_msg").hide();
-    $("#passw_error_msg").hide();
-    $("#confpass_error_msg").hide();
-
-    let error_username = false;
+     let error_username = false;
     let error_password = false;
     let error_fname = false;
     let error_email = false;
     let error_number = false
     let error_passw = false;
     let error_retype_password = false;
+    
+    
+    
+    
+    $("#error-user").hide();
+    $("#error-password").hide();
+    $("#error-name").hide();
+    $("#error-email").hide();
+    $("#error-phone").hide();
+    $("#error-reg-pass").hide();
+    $("#error-reg-confpass").hide();
+
+
+    $("btn-home-logout").hide();
+
+   
 
     $("#username").keyup(function () {
         check_username();
@@ -43,11 +51,11 @@ $(function () {
         let value = $('#username').val()
         let expression = /^[6-9]\d{9}|([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
         if (value = '' || !value.match(expression)) {
-            $('#username_error_msg').show()
+            $('#error-user').show()
             error_username = true
         } else {
-            $(this).css("border", "11px solid silver")
-            $('#username_error_msg').hide()
+            
+            $('#error-user').hide()
             
         }
     }
@@ -56,13 +64,12 @@ $(function () {
     function check_password() {
         let password_length = $("#pass").val().length;
         if (password_length < 8) {
-            $("#password_error_msg").html("Atleast 8 Characters");
-            $("#password_error_msg").show();
+            $("#error-password").html("Atleast 8 Characters");
+            $("#error-password").show();
             $("#password").css("border-bottom", "2px solid #F90A0A");
             error_password = true;
         } else {
-            $(this).css("border", "1px solid silver")
-            $("#password_error_msg").hide();
+            $("#error-password").hide();
         }
     }
 
@@ -71,12 +78,11 @@ $(function () {
         let pattern = /^[a-zA-Z\s]*$/;
         let fname = $("#name").val();
         if (pattern.test(fname) && fname !== "") {
-            $(this).css("border", "1px solid silver")
-            $("#fullname_error_msg").hide();
+            $("#error-name").hide();
             
         } else {
-            $("#fullname_error_msg").html("Should contain only Characters");
-            $("#fullname_error_msg").show();
+            $("#error-name").html("Should contain only Characters");
+            $("#error-name").show();
             error_fname = true;
         }
     }
@@ -85,10 +91,9 @@ $(function () {
         let pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         let email = $("#email").val();
         if (pattern.test(email) && email !== "") {
-            $(this).css("border", "1px solid silver")
-            $("#email_error_msg").hide();
+            $("#error-email").hide();
         } else {
-            $("#email_error_msg").show();
+            $("#error-email").show();
             error_email = true;
         }
     }
@@ -98,25 +103,23 @@ $(function () {
         let $regexNumber = /^[6-9]\d{9}$/
         let numberValue = $("#phone").val()
         if (numberValue < 999999999 || !numberValue.match($regexNumber)) {
-            $("#phone_error_msg").show()
+            $("#error-phone").show()
             error_number = true
             return true
         } else {
-            $(this).css("border", "1px solid silver")
-            $("#phone_error_msg").hide()
+            $("#error-phone").hide()
         }
     }
     //mobile number validation ends
-
+    console.log(logged_in);
 
     function check_passw() {
         let password_length = $("#passw").val().length;
         if (password_length < 8) {
-            $("#passw_error_msg").show();
+            $("#error-reg-pass").show();
             error_passw = true;
         } else {
-            $("#passw_error_msg").hide();
-            $(this).css("border", "1px solid silver")
+            $("#error-reg-pass").hide();
         }
     }
 
@@ -124,11 +127,10 @@ $(function () {
         let password = $("#passw").val();
         let retype_password = $("#repass").val();
         if (password !== retype_password) {
-            $("#confpass_error_msg").show();
+            $("#error-reg-confpass").show();
             error_retype_password = true;
         } else {
-            $("#confpass_error_msg").hide();
-            $(this).css("border", "1px solid silver")
+            $("#error-reg-confpass").hide();
 
         }
     }
@@ -148,7 +150,7 @@ $(function () {
             
             let username = $("#username").val()
             let password = $("#pass").val()
-            exprss = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/     //shubham : \w+ 
+            exprss = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/      
             const myUrl = new URL('http://localhost:3000/users/')
             if($("#username").val().match(exprss)){
                 myUrl.searchParams.set("email", username)
@@ -167,8 +169,15 @@ $(function () {
                 contentType: "application/json; charset=utf-8",
                 dataType: 'json',
                 success: function (result){
+                    if(result.length!=0)
+                    {
                     console.log(result)
                     console.log("DOneeeee");
+                    logged_in=true;
+                    }
+                    else{
+                        console.log("Noooo");
+                    }
                 }
               });
 
@@ -219,3 +228,4 @@ $(function () {
     })
 
 })
+

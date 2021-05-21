@@ -1,4 +1,5 @@
-html, * {
+html,
+* {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -22,9 +23,31 @@ body .btn-home-register:hover {
   background-color: chartreuse;
 }
 
+.modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-footer #login-btn,
+.modal-footer #registration-btn {
+  width: 100%;
+  margin-top: 10px;
+  height: 2.8rem;
+  font-size: 1.1rem;
+}
+
 .modal {
   height: 100vh;
-  overflow-y: auto;
+  background-color: #000c06;
+  opacity: 100%;
 }
 
 .modal .modal-dialog {
@@ -33,6 +56,8 @@ body .btn-home-register:hover {
 
 .modal-content {
   max-width: 28rem;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
   padding: 1rem;
   position: relative;
 }
@@ -60,22 +85,27 @@ body .btn-home-register:hover {
   width: 100%;
 }
 
-.modal-content .modal-body #username_error_msg,
-.modal-content .modal-body #password_error_msg,
-.modal-content .modal-body #fullname_error_msg,
-.modal-content .modal-body #email_error_msg,
-.modal-content .modal-body #phone_error_msg,
-.modal-content .modal-body #passw_error_msg,
-.modal-content .modal-body #confpass_error_msg {
+.modal-content label {
+  color: black;
+  font-weight: bold;
+}
+
+.modal-content .modal-body #error-user,
+.modal-content .modal-body #error-password,
+.modal-content .modal-body #error-name,
+.modal-content .modal-body #error-email,
+.modal-content .modal-body #error-phone,
+.modal-content .modal-body #error-reg-pass,
+.modal-content .modal-body #error-reg-confpass {
   margin-top: 0.3rem;
   width: 100%;
   font-size: 1rem;
-  color: #C62828;
+  color: #c62828;
   background: rgba(255, 0, 0, 0.1);
   text-align: center;
   padding: 0.3rem 0.5rem;
   border-radius: 0.2rem;
-  border: 0.1rem solid #EF9A9A;
+  border: 0.1rem solid #af0808;
   display: none;
 }
 
@@ -107,7 +137,7 @@ body .btn-home-register:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 3rem 0 1rem 0;
+  margin: 2rem 0 0 0;
   display: block;
   height: 2.8rem;
   width: 100%;
@@ -115,7 +145,7 @@ body .btn-home-register:hover {
   color: white;
   outline: none;
   font-weight: bold;
-  background: chartreuse;
+  background: limegreen;
   border-radius: 0.2rem;
   border: 0.1rem solid black;
   -webkit-transition: 0.5s;
@@ -124,6 +154,6 @@ body .btn-home-register:hover {
 
 .modal-content #btn-modal-login:hover,
 .modal-content #btn-modal-reg:hover {
-  background: limegreen;
+  background: chartreuse;
 }
 /*# sourceMappingURL=styles.css.map */

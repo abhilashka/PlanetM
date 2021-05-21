@@ -1,128 +1,136 @@
-html, * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 16px;
+html,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 // Home Page Buttons
-body{
-    .btn-home-login{
-        background-color: limegreen;
+body {
+  .btn-home-login {
+    background-color: limegreen;
 
-        &:hover{
-            background-color: chartreuse;
-        }
+    &:hover {
+      background-color: chartreuse;
     }
-    .btn-home-register{
-        background-color: limegreen;
+  }
+  .btn-home-register {
+    background-color: limegreen;
 
-        &:hover{
-            background-color: chartreuse;
-        }
+    &:hover {
+      background-color: chartreuse;
     }
+  }
 }
 
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  #login-btn,
+  #registration-btn {
+    width: 100%;
+    margin-top: 10px;
+    height: 2.8rem;
+    font-size: 1.1rem;
+  }
+}
 
-.modal{
-    height: 100vh;
-    overflow-y: auto;
-    .modal-dialog{
-        overflow-y: initial !important
-    }
+.modal {
+  height: 100vh;
+  //  overflow-y: auto;
+  .modal-dialog {
+    overflow-y: initial !important;
+  }
+  background-color: #000c06;
+  opacity: 100%;
 }
 
 .modal-content {
-    max-width: 28rem;
-    padding: 1rem;
-    position: relative;
-    .modal-header {
-        height: 100px;
-        justify-content: center;
-        h5 {
-            position: absolute;
-            top: 1rem;
-            
-        }
-        .modal-title{
-            position: absolute;
-            left: 0;
-            top: 3rem;
-            text-align: center;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #130f40;
-            width: 100%;
-        }
+  max-width: 28rem;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  position: relative;
+  .modal-header {
+    height: 100px;
+    justify-content: center;
+    h5 {
+      position: absolute;
+      top: 1rem;
     }
-    
+    .modal-title {
+      position: absolute;
+      left: 0;
+      top: 3rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #130f40;
+      width: 100%;
+    }
+  }
+  label {
+    color: black;
+    font-weight: bold;
+  }
 
-    .modal-body {
-        #username_error_msg,
-        #password_error_msg,
-        #fullname_error_msg,
-        #email_error_msg,
-        #phone_error_msg,
-        #passw_error_msg,
-        #confpass_error_msg {
-            margin-top: 0.3rem;
-            width: 100%;
-            font-size: 1rem;
-            color: #C62828;
-            background: rgba(255, 0, 0, 0.1);
-            text-align: center;
-            padding: 0.3rem 0.5rem;
-            border-radius: 0.2rem;
-            border: 0.1rem solid #EF9A9A ;
-            display: none;
-        }
+  .modal-body {
+    #error-user,
+    #error-password,
+    #error-name,
+    #error-email,
+    #error-phone,
+    #error-reg-pass,
+    #error-reg-confpass {
+      margin-top: 0.3rem;
+      width: 100%;
+      font-size: 1rem;
+      color: #c62828;
+      background: rgba(255, 0, 0, 0.1);
+      text-align: center;
+      padding: 0.3rem 0.5rem;
+      border-radius: 0.2rem;
+      border: 0.1rem solid #af0808;
+      display: none;
     }
+  }
 
-    .modal-body {
-        form {
-            #pass-div {
-                position: relative;
-                i {
-                    position: absolute;
-                    right: 1rem;
-                    top: 70%;
-                    cursor: pointer;
-                    transform: translateY(-50%);
-                }
-            }
+  .modal-body {
+    form {
+      #pass-div {
+        position: relative;
+        i {
+          position: absolute;
+          right: 1rem;
+          top: 70%;
+          cursor: pointer;
+          transform: translateY(-50%);
         }
+      }
     }
-    #btn-modal-login,
-    #btn-modal-reg {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin: 3rem 0 1rem 0;
-        display: block;
-        height: 2.8rem;
-        width: 100%;
-        font-size: 1.5rem;
-        color: white;
-        outline: none;
-        font-weight: bold;
-        background: chartreuse;
-        border-radius: 0.2rem;
-        border: 0.1rem solid black;
-        transition: 0.5s;
-        &:hover {
-            background: limegreen;
-        }
+  }
+  #btn-modal-login,
+  #btn-modal-reg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem 0 0 0;
+    display: block;
+    height: 2.8rem;
+    width: 100%;
+    font-size: 1.5rem;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    background: limegreen;
+    border-radius: 0.2rem;
+    border: 0.1rem solid black;
+    transition: 0.5s;
+    &:hover {
+      background: chartreuse;
     }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
