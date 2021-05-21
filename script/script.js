@@ -1,39 +1,3 @@
-// $(function () {
-//     var $orders = $('#orders');
-
-//     $.ajax({
-//         type: 'GET',
-//         url: 'http://localhost:3000/posts',
-//         port: 3000,
-//         success: function (orders) {
-//             $.each(orders, function (i, order) {
-//                 // $orders.append('<div class="card md-col-2" style="width: 18rem;">  <div class="card-body"> <div class="card-title"> <h4>' + order.title + '</h4><div class="card-text"> ' + order.author + '</div>' + ' </div></div> </div>');
-//                 $orders.append(
-//                     `
-//                     <div class= "card" style = "width: 200px; ">
-//                     <div class="card-body" style=" background-image: url('${order.images[0].url}');">
-
-//                     <img src="${order.images[0].url}" alt="img">
-//                     <img  class="play" src="https://i.pinimg.com/originals/ef/07/47/ef07471474a0e1086a185086c342ae00.jpg" alt="">
-//                 <img src="${order.images[0].url}" alt="img">
-
-//                     </div>`+ `
-
-//                     <div class="card-footer">
-//                         <a href="#" class="card-link">${order.name}</a>
-//                         <p>Album: <a href="#">${order.album_type} </a>
-//                         Artist: <a href="#">${order.artists[0].name} </a>
-
-//                         </p>
-//                     </div>
-//                     </div >
-
-//                     `)
-//             });
-//         }
-//     });
-// });
-
 
 
 
@@ -128,9 +92,9 @@ $(document).ready(function () {
   });
 });
 
-$(".dropdown-menu a").on("click",function(){
-    var ak=$(this).attr("id");
-    alert(ak);
+$(".dropdown-menu a").on("click", function () {
+  var ak = $(this).attr("id");
+  alert(ak);
 
 
 
@@ -146,23 +110,23 @@ $(".dropdown-menu a").on("click",function(){
 })
 //this API is for fetching the english songs
 
-$(".dropdown-menu a").on("click",function () {
-  
+$(".dropdown-menu a").on("click", function () {
+
   var a_href = $(this).attr("id");
   console.log(a_href);
 
-      $.ajax({
-        type: "GET",
-        url: "http://localhost:3000/music?language=" + a_href,
-        dataType: "json",
-        async: true,
-        success: function (data) {
-          console.log(data);
-          let audios = "";
-          $.each(data, function (i, v) {
+  $.ajax({
+    type: "GET",
+    url: "http://localhost:3000/music?language=" + a_href,
+    dataType: "json",
+    async: true,
+    success: function (data) {
+      console.log(data);
+      let audios = "";
+      $.each(data, function (i, v) {
 
 
-            audios += `
+        audios += `
            <div id="${v.url}" value="${v.language}" class="resource-box">
            <div class="song-image">
            <img class="img-fluid" src=${v.img} />
@@ -174,23 +138,23 @@ $(".dropdown-menu a").on("click",function () {
             </div>
 
            `;
-          });
-
-          $(".inside-main-content").empty();
-          $(".inside-main-content").append(audios);
-
-        },
-
-
-        error: function () {
-          console.log("songs are not available");
-        },
-
-
       });
+
+      $(".inside-main-content").empty();
+      $(".inside-main-content").append(audios);
+
+    },
+
+
+    error: function () {
+      console.log("songs are not available");
+    },
+
+
+  });
 });
 
 
 
- 
+
 
