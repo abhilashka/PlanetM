@@ -6,7 +6,7 @@ html,
   font-size: 16px;
 }
 // Home Page Buttons
-body {
+body {background-color: rgb(255, 255, 255);
   .btn-home-login {
     background-color: limegreen;
 
@@ -20,6 +20,7 @@ body {
     &:hover {
       background-color: chartreuse;
     }
+    
   }
 }
 
@@ -47,9 +48,10 @@ body {
   opacity: 100%;
 }
 
+
 .modal-content {
   max-width: 28rem;
-  border: 2px solid #ffffff;
+  border: 2px solid #2c0202;
   border-radius: 12px;
   padding: 1rem;
   position: relative;

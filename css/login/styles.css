@@ -7,6 +7,10 @@ html,
   font-size: 16px;
 }
 
+body {
+  background-color: rgb(29, 27, 27);
+}
+
 body .btn-home-login {
   background-color: limegreen;
 }
@@ -56,7 +60,7 @@ body .btn-home-register:hover {
 
 .modal-content {
   max-width: 28rem;
-  border: 2px solid #ffffff;
+  border: 2px solid #2c0202;
   border-radius: 12px;
   padding: 1rem;
   position: relative;
