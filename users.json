@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "name": "aa aa",
+      "email": "a@gmail.com",
+      "mobile": "9000000000",
+      "password": "12121212",
+      "id": 1
+    },
+    {
+      "name": "ras",
+      "email": "r@gm.co",
+      "mobile": "9000000000",
+      "password": "11111111",
+      "id": 2
+    },
+    {
+      "name": "qwer",
+      "email": "qwe@go.bo",
+      "mobile": "9898989898",
+      "password": "300300300",
+      "id": 3
+    },
+    {
+      "name": "a",
+      "email": "a@g.co",
+      "mobile": "9325252525",
+      "password": "55555555",
+      "id": 4
+    },
+    {
+      "name": "a",
+      "email": "a@gm.co",
+      "mobile": "9326454545",
+      "password": "123123123",
+      "id": 5
+    },
+    {
+      "name": "llll",
+      "email": "ll@ll.ll",
+      "mobile": "9111111111",
+      "password": "11111111",
+      "id": 6
+    },
+    {
+      "name": "Rahul",
+      "email": "rahul@gmail.com",
+      "mobile": "9090909090",
+      "password": "123456789",
+      "id": 7
+    },
+    {
+      "name": "shubham",
+      "email": "shubham@gmail.com",
+      "mobile": "6060606060",
+      "password": "MTAxMDEwMTA=",
+      "id": 8
+    },
+    {
+      "name": "cyril si",
+      "email": "dude@gmail.com",
+      "mobile": "9874563219",
+      "password": "MTIzNDU2Nzg5",
+      "id": 9
+    },
+    {
+      "name": "sks",
+      "email": "sk@gmail.com",
+      "mobile": "9873545454",
+      "password": "MTIzNDU2Nzg5",
+      "id": 10
+    }
+  ]
+}

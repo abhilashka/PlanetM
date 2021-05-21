@@ -1,0 +1,51 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(../../font3.otf);
+}
+
+* {
+  font-family: myFirstFont;
+}
+
+.discover-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.discover-container .item {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.discover-container .item span {
+  position: relative;
+  top: 30px;
+  margin-left: 10px;
+  font-size: 2rem;
+  color: white;
+  font-weight: 100;
+}
+
+.discover-container .item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.discover-container .item:hover {
+  -webkit-box-shadow: 5px 23px 47px #212121;
+          box-shadow: 5px 23px 47px #212121;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: black;
+}
+/*# sourceMappingURL=discover.css.map */
