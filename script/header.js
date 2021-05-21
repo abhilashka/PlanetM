@@ -68,3 +68,13 @@ function search() {
 }
 
 
+function logout() {
+    localStorage.removeItem('name')
+    location.href = "./index.html";
+
+}
+
+function profile() {
+    location.href = "./ui/userprofile.html";
+
+}

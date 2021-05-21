@@ -22,6 +22,7 @@
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
   position: fixed;
+  margin-bottom: 50px;
 }
 
 .header .logo {
