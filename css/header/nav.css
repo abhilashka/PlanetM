@@ -39,6 +39,8 @@ html {
 .nav .nav-item:nth-child(1) img {
   width: 3rem;
   height: 3rem;
+  position: relative;
+  top: 5px;
 }
 
 .nav .nav-item:nth-child(1) span {
@@ -105,6 +107,8 @@ html {
   .nav .nav-item:nth-child(1) img {
     width: 4rem;
     height: 4rem;
+    position: relative;
+    top: 5px;
   }
   .nav .nav-item:nth-child(2) {
     display: -ms-grid;
@@ -144,6 +148,8 @@ html {
   .nav .nav-item:nth-child(1) img {
     width: 4rem;
     height: 4rem;
+    position: relative;
+    top: 5px;
   }
   .nav .nav-item:nth-child(1) span {
     display: none;

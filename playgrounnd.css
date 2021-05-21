@@ -1,0 +1,24 @@
+.header {
+  background-color: black;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[6];
+      grid-template-columns: repeat(6, auto);
+  height: 50px;
+  width: auto;
+}
+
+.header .header-menu {
+  width: 100px;
+  border: 1px solid red;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=playgrounnd.css.map */

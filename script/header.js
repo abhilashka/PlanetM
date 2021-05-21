@@ -18,3 +18,12 @@ function login() {
 }
 
 
+
+$(document).ready(function () {
+
+    $('.nav .profile .account').hide()
+
+
+    
+
+})
