@@ -36,6 +36,7 @@
 
 
 
+
 // ---------------   This API is for loading music   --------------------//
 
 let ajax1 = $.ajax({
@@ -127,41 +128,56 @@ $(document).ready(function () {
   });
 });
 
+$(".dropdown-menu a").on("click",function(){
+    var ak=$(this).attr("id");
+    alert(ak);
 
+
+
+
+
+
+
+
+
+
+
+
+})
 //this API is for fetching the english songs
 
-$(document).ready(function () {
-
-  $('.hideme').hide()
-  $("#format").change(function () {
-    if ($("#format").val() == 'English') {
+$(".dropdown-menu a").on("click",function () {
+  
+  var a_href = $(this).attr("id");
+  console.log(a_href);
 
       $.ajax({
         type: "GET",
-        url: "http://localhost:3000/english/",
+        url: "http://localhost:3000/music?language=" + a_href,
         dataType: "json",
         async: true,
         success: function (data) {
           console.log(data);
-          let englishsongs = "";
+          let audios = "";
           $.each(data, function (i, v) {
 
 
-            englishsongs += `
-           <div class="english-box">
-           <div id=${v.url}>
+            audios += `
+           <div id="${v.url}" value="${v.language}" class="resource-box">
            <div class="song-image">
            <img class="img-fluid" src=${v.img} />
            </div>
            <div class="song-title">
-                <strong><span>${v.name}</span></strong>
-                <p>${v.id}</p>
+             <strong><span>${v.name}</span></strong>
+             <p>${v.id}</p>
             </div>
             </div>
-            </div>
+
            `;
           });
-          $(".english-inside-main-content").append(englishsongs);
+
+          $(".inside-main-content").empty();
+          $(".inside-main-content").append(audios);
 
         },
 
@@ -172,176 +188,9 @@ $(document).ready(function () {
 
 
       });
-    }
-
-
-
-  });
-
-});
-
-//this API is for fetching the hindi songs
-
-$(document).ready(function () {
-
-  $("#format").change(function () {
-    if ($("#format").val() == 'Hindi') {
-
-      $.ajax({
-        type: "GET",
-        url: "http://localhost:3000/hindi/",
-        dataType: "json",
-        async: true,
-        success: function (data) {
-          console.log(data);
-          let hindisongs = "";
-          $.each(data, function (i, v) {
-
-
-            hindisongs += `
-            <div class="english-box">
-            <div id=${v.url}>
-            <div class="song-image">
-            <img class="img-fluid" src=${v.img} />
-            </div>
-            <div class="song-title">
-                 <strong><span>${v.name}</span></strong>
-                 <p>${v.id}</p>
-             </div>
-             </div>
-             </div>
-            `;
-          });
-          $(".hindi-inside-main-content").append(hindisongs);
-
-        },
-
-
-        error: function () {
-          console.log("songs are not available");
-        },
-
-
-      });
-    }
-
-
-
-  });
-
 });
 
 
 
-
-
-
-//this API is for fetching the marathi songs
-
-$(document).ready(function () {
-
-  $("#format").change(function () {
-    if ($("#format").val() == 'Marathi') {
-
-      $.ajax({
-        type: "GET",
-        url: "http://localhost:3000/marathi/",
-        dataType: "json",
-        async: true,
-        success: function (data) {
-          console.log(data);
-          let marathisongs = "";
-          $.each(data, function (i, v) {
-
-
-            marathisongs += `
-            <div class="english-box">
-            <div id=${v.url}>
-            <div class="song-image">
-            <img class="img-fluid" src=${v.img} />
-            </div>
-            <div class="song-title">
-                 <strong><span>${v.name}</span></strong>
-                 <p>${v.id}</p>
-             </div>
-             </div>
-             </div>
-            `;
-          });
-          $(".marathi-inside-main-content").append(marathisongs);
-
-        },
-
-
-        error: function () {
-          console.log("songs are not available");
-        },
-
-
-      });
-    }
-
-
-
-  });
-
-});
-
-
-
-
-
-//this API is for fetching the punjabi songs
-
-$(document).ready(function () {
-
-  $("#format").change(function () {
-    if ($("#format").val() == 'Punjabi') {
-
-      $.ajax({
-        type: "GET",
-        url: "http://localhost:3000/punjabi/",
-        dataType: "json",
-        async: true,
-        success: function (data) {
-          console.log(data);
-          let punjabisongs = "";
-          $.each(data, function (i, v) {
-
-
-            punjabisongs += `
-            <div class="english-box">
-            <div id=${v.url}>
-            <div class="song-image">
-            <img class="img-fluid" src=${v.img} />
-            </div>
-            <div class="song-title">
-                 <strong><span>${v.name}</span></strong>
-                 <p>${v.id}</p>
-             </div>
-             </div>
-             </div>
-            `;
-          });
-          $(".punjabi-inside-main-content").append(punjabisongs);
-
-        },
-
-
-        error: function () {
-          console.log("songs are not available");
-        },
-
-
-      });
-    }
-
-
-
-  });
-
-});
-
-
-
+ 
 
