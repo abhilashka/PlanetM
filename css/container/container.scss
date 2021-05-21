@@ -15,10 +15,10 @@
       display: none;
     }
 
-    .card {
+    .card1 {
       margin: 10px;
       cursor: pointer;
-      .card-body {
+      .card1-body {
         display: grid;
         justify-content: center;
         grid-template-columns: auto;
@@ -42,7 +42,7 @@
         }
       }
 
-      .card-footer {
+      .card1-footer {
         font-size: 1rem;
         &:hover {
           text-decoration: underline;

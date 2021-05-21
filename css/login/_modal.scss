@@ -8,17 +8,16 @@ html,
 // Home Page Buttons
 body {
   .btn-home-login {
-    background-color: limegreen;
-
+    background-color: #fcfffd;
     &:hover {
       background-color: chartreuse;
     }
   }
   .btn-home-register {
-    background-color: limegreen;
-
+    border: none;
+    color: rgb(165, 164, 164);
     &:hover {
-      background-color: chartreuse;
+      color: white;
     }
   }
 }
@@ -43,8 +42,8 @@ body {
   .modal-dialog {
     overflow-y: initial !important;
   }
-  background-color: #000c06;
-  opacity: 100%;
+  background-color: #000000;
+  opacity: 92%;
 }
 
 .modal-content {

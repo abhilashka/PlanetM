@@ -15,7 +15,7 @@ html {
   font-size: 62.5%;
 }
 
-.nav {
+.nav1 {
   display: grid;
   grid-template-columns: auto auto auto;
   background-color: black;
@@ -82,7 +82,7 @@ html {
     font-size: 52.5%;
   }
 
-  .nav {
+  .nav1 {
     position: sticky;
     top: 0px;
     .nav-item:nth-child(1) {
@@ -118,7 +118,7 @@ html {
   html {
     font-size: 42.5%;
   }
-  .nav {
+  .nav1 {
     position: sticky;
     top: 0px;
     .nav-item:nth-child(1) {
@@ -147,5 +147,17 @@ html {
         height: 7vw;
       }
     }
+  }
+}
+
+
+
+
+
+.profile{
+  display: flex;
+  justify-content: space-around;
+  .btn{
+
   }
 }

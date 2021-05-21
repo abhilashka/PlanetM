@@ -17,7 +17,7 @@ html {
   font-size: 62.5%;
 }
 
-.nav {
+.nav1 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto;
@@ -27,7 +27,7 @@ html {
   padding: 1rem;
 }
 
-.nav .nav-item {
+.nav1 .nav-item {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -36,24 +36,24 @@ html {
       align-self: center;
 }
 
-.nav .nav-item:nth-child(1) img {
+.nav1 .nav-item:nth-child(1) img {
   width: 3rem;
   height: 3rem;
 }
 
-.nav .nav-item:nth-child(1) span {
+.nav1 .nav-item:nth-child(1) span {
   font-size: 3rem;
   letter-spacing: -0.06em;
   color: white;
   font-family: myfont;
 }
 
-.nav .nav-item:nth-child(1) :last-child {
+.nav1 .nav-item:nth-child(1) :last-child {
   font-size: 3.5rem;
   color: #65d36e;
 }
 
-.nav .nav-item:nth-child(2) {
+.nav1 .nav-item:nth-child(2) {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[4];
@@ -62,7 +62,7 @@ html {
           column-gap: 4rem;
 }
 
-.nav .nav-item:nth-child(2) span {
+.nav1 .nav-item:nth-child(2) span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -71,15 +71,15 @@ html {
   cursor: pointer;
 }
 
-.nav .nav-item:nth-child(2) span:hover {
+.nav1 .nav-item:nth-child(2) span:hover {
   color: white;
 }
 
-.nav .nav-item:nth-child(2) svg {
+.nav1 .nav-item:nth-child(2) svg {
   display: none;
 }
 
-.nav .nav-item:nth-child(3) {
+.nav1 .nav-item:nth-child(3) {
   font-size: 2rem;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
@@ -88,7 +88,7 @@ html {
   display: grid;
 }
 
-.nav .nav-item:nth-child(3) a {
+.nav1 .nav-item:nth-child(3) a {
   color: white;
   text-decoration: none;
 }
@@ -97,16 +97,16 @@ html {
   html {
     font-size: 52.5%;
   }
-  .nav {
+  .nav1 {
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
   }
-  .nav .nav-item:nth-child(1) img {
+  .nav1 .nav-item:nth-child(1) img {
     width: 4rem;
     height: 4rem;
   }
-  .nav .nav-item:nth-child(2) {
+  .nav1 .nav-item:nth-child(2) {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto auto auto auto;
@@ -114,10 +114,10 @@ html {
     -webkit-column-gap: 7rem;
             column-gap: 7rem;
   }
-  .nav .nav-item:nth-child(2) span {
+  .nav1 .nav-item:nth-child(2) span {
     display: none;
   }
-  .nav .nav-item:nth-child(2) svg {
+  .nav1 .nav-item:nth-child(2) svg {
     display: block;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -127,7 +127,7 @@ html {
     fill: #818181;
     cursor: pointer;
   }
-  .nav .nav-item:nth-child(2) svg:hover {
+  .nav1 .nav-item:nth-child(2) svg:hover {
     fill: white;
   }
 }
@@ -136,19 +136,19 @@ html {
   html {
     font-size: 42.5%;
   }
-  .nav {
+  .nav1 {
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
   }
-  .nav .nav-item:nth-child(1) img {
+  .nav1 .nav-item:nth-child(1) img {
     width: 4rem;
     height: 4rem;
   }
-  .nav .nav-item:nth-child(1) span {
+  .nav1 .nav-item:nth-child(1) span {
     display: none;
   }
-  .nav .nav-item:nth-child(2) {
+  .nav1 .nav-item:nth-child(2) {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto auto auto auto;
@@ -156,10 +156,10 @@ html {
     -webkit-column-gap: 5rem;
             column-gap: 5rem;
   }
-  .nav .nav-item:nth-child(2) span {
+  .nav1 .nav-item:nth-child(2) span {
     display: none;
   }
-  .nav .nav-item:nth-child(2) svg {
+  .nav1 .nav-item:nth-child(2) svg {
     display: block;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -167,5 +167,13 @@ html {
     width: 7vw;
     height: 7vw;
   }
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=nav.css.map */
