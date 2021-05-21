@@ -5,7 +5,19 @@ $(document).ready(function () {
 
     $('.searchform').hide()
 
+    if (localStorage.getItem('name') === null) {
+        $('.btn-home-profile').hide()
+        $('.btn-home-register').show()
+        $('.btn-home-login').show()
 
+    }
+    else {
+        $('.btn-home-register').hide()
+        $('.btn-home-login').hide()
+        $('.btn-home-profile').show()
+        var profilename = localStorage.getItem('name')
+        $('#dropdownMenu2').append(` ${profilename}`)
+    }
 
 
 })
