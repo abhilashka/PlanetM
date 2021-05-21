@@ -18,6 +18,10 @@
   margin: 10px;
 }
 
+.playlist-container .playlist-item:hover {
+  background-color: red;
+}
+
 .playlist-container .create {
   cursor: pointer;
   -webkit-box-align: start;
