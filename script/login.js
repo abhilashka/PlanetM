@@ -1,16 +1,16 @@
 let logged_in = false;
 $(function () {
-     let error_username = false;
+    let error_username = false;
     let error_password = false;
     let error_fname = false;
     let error_email = false;
     let error_number = false
     let error_passw = false;
     let error_retype_password = false;
-    
-    
-    
-    
+
+
+
+
     $("#error-user").hide();
     $("#error-password").hide();
     $("#error-name").hide();
@@ -22,7 +22,7 @@ $(function () {
 
     $("btn-home-logout").hide();
 
-   
+
 
     $("#username").keyup(function () {
         check_username();
@@ -35,7 +35,7 @@ $(function () {
     });
     $("#email").keyup(function () {
         check_email();
-    }); 
+    });
     $("#phone").keyup(function () {
         check_phone()
     });
@@ -54,9 +54,9 @@ $(function () {
             $('#error-user').show()
             error_username = true
         } else {
-            
+
             $('#error-user').hide()
-            
+
         }
     }
     //username validation ends
@@ -79,7 +79,7 @@ $(function () {
         let fname = $("#name").val();
         if (pattern.test(fname) && fname !== "") {
             $("#error-name").hide();
-            
+
         } else {
             $("#error-name").html("Should contain only Characters");
             $("#error-name").show();
@@ -135,7 +135,7 @@ $(function () {
         }
     }
 
-    
+
 
     $("#login_form").submit(function (e) {
         e.preventDefault()
@@ -147,19 +147,19 @@ $(function () {
         check_password();
 
         if (error_username === false && error_password === false) {
-            
+
             let username = $("#username").val()
             let password = $("#pass").val()
-            exprss = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/      
+            exprss = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/
             const myUrl = new URL('http://localhost:3000/users/')
-            if($("#username").val().match(exprss)){
+            if ($("#username").val().match(exprss)) {
                 myUrl.searchParams.set("email", username)
             } else {
                 myUrl.searchParams.set("mobile", username)
             }
             myUrl.searchParams.set("password", btoa(password))
             myUrl.searchParams.get("name")
-            
+
 
             console.log(myUrl)
 
@@ -168,26 +168,26 @@ $(function () {
                 url: myUrl,
                 contentType: "application/json; charset=utf-8",
                 dataType: 'json',
-                success: function (result){
-                    if(result.length!=0)
-                    {
-                    console.log(result)
-                    console.log("DOneeeee");
-                    logged_in=true;
-                    }
-                    else{
-                        console.log("Noooo");
+                success: function (result) {
+                    if (result.length != 0) {
+                        let name1 = result[0].name;
+                        localStorage.setItem('name', name1); console.log(name1);
+                        console.log("DOneeeee"); alert("Logged in as " + name1);
+                        location.href = "./index.html";
+                        console.log("Hello");
+                    } else {
+                        alert("Wrong credentials!! ");
                     }
                 }
-              });
+            });
 
-        }else {
+        } else {
             alert("Please Fill the form Correctly");
         }
     })
-         
-       
-    
+
+
+
     $("#registration_form").submit(function (e) {
         e.preventDefault()
 
@@ -210,7 +210,7 @@ $(function () {
                 mobile: $("#phone").val(),
                 password: btoa($("#passw").val())
             }
-            
+
             $.ajax({
                 type: "POST",
                 dataType: "json",
@@ -224,7 +224,7 @@ $(function () {
             alert("Please Fill the form Correctly");
             return false;
         }
-        
+
     })
 
 })

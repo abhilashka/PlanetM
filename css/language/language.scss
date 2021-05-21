@@ -1,0 +1,60 @@
+* {
+  font-family: myFirstFont, Helvetica Neue, helvetica, arial,
+    Hiragino Kaku Gothic Pro, Meiryo, MS Gothic, sans-serif;
+}
+
+.inside-main-content {
+  display: flex;
+}
+
+.form-inline {
+  display: flex;
+}
+
+.menu-list {
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-color: black;
+  color: white;
+
+  .menu-item {
+    display: flex;
+    justify-content: space-around;
+
+    h1 {
+      font-size: 50px;
+    }
+
+    ul {
+      border: 1px solid black;
+      color: rgb(236, 184, 184);
+      font-size: 30px;
+      list-style-type: none;
+
+      li {
+        a {
+          color: white;
+          font-size: 40px;
+        }
+
+        .dropdown-menu {
+          .dropdown-item {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-list .menu-item ul li .dropdown-menu .dropdown-item {
+  background-color: black;
+  width: 233px;
+}
+
+body {
+  background-color: black;
+}

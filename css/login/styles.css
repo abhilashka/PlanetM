@@ -8,19 +8,20 @@ html,
 }
 
 body .btn-home-login {
-  background-color: limegreen;
+  background-color: #fcfffd;
 }
 
 body .btn-home-login:hover {
-  background-color: chartreuse;
+  background-color: #65d36e;
 }
 
 body .btn-home-register {
-  background-color: limegreen;
+  border: none;
+  color: #a5a4a4;
 }
 
 body .btn-home-register:hover {
-  background-color: chartreuse;
+  color: white;
 }
 
 .modal-footer {
@@ -46,8 +47,8 @@ body .btn-home-register:hover {
 
 .modal {
   height: 100vh;
-  background-color: #000c06;
-  opacity: 100%;
+  background-color: #000000;
+  opacity: 92%;
 }
 
 .modal .modal-dialog {
