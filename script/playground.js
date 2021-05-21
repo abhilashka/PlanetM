@@ -1,4 +1,10 @@
+let songsList=[];
+let iValue=0;
+
 $(document).ready(function () {
+    AudioPlayer();
+    $("#myAudio").attr('src',songsList[iValue].songPath)
+
     // click on button submit
     $("#submit").on('click', function () {
         // send ajax
@@ -19,6 +25,44 @@ $(document).ready(function () {
     });
 });
 
+function PlaySong(){
+
+    //         iVlaue
+    // play -> 0
+    // next  -> iValue ++   ivalue>=songLIst.length  ivalue =0    
+    //previous -> ivalue --   0<=ivalue
+    $("#myAudio").attr('src',songsList[iValue].songPath)
+}
+
+function NextSong(){
+    if( iValue>=songsList.length)
+    {
+        iValue=0
+    }
+    else iValue++
+    $("#myAudio").attr('src',songsList[iValue].songPath)
+}
+
+/*function PreviousSong(){
+    iValue=0
+    // Start position 
+    if (iValue == 0) {
+  
+        // Add disabled attribute on
+        // prev button
+        document.getElementsByClassName(
+                'PreviousSong').disabled = true;
+
+        // Remove disabled attribute 
+        // from next button 
+        document.getElementsByClassName(
+                'NextSong').disabled = false;
+    } else {
+        iValue--;
+        return setNo();
+    }
+
+}*/
 
 
 $(function () {
@@ -42,3 +86,16 @@ $(function () {
     });
 
 });
+
+function AudioPlayer(){
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost:3000/songs',
+        port: 3000,
+        success: function (songs) {
+            songsList=songs;
+        }
+    });
+}
+           
+        

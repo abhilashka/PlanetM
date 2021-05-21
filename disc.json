@@ -1,0 +1,15 @@
+{
+    
+        "songs":[
+            {
+                "songPath":"../assests/audio/Beyonce.mp3"
+            },
+            {
+                "songPath":"../assests/audio/teleradio-donoso.mp3"
+            },
+            {
+                "songPath":"../assests/audio/interludes.mp3"
+            }
+        ]
+    
+}
