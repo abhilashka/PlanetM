@@ -5,6 +5,10 @@
 
 .inside-main-content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
 }
 
 .form-inline {
@@ -16,16 +20,22 @@
 
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 80px;
   background-color: black;
   color: white;
+  position: fixed;
+  top: 70px;
+  width: 100%;
 
   .menu-item {
     display: flex;
     justify-content: space-around;
 
     h1 {
-      font-size: 50px;
+      font-size: 25px;
+      position: relative;
+      top: 14px;
+      right: -39px;
     }
 
     ul {
@@ -37,7 +47,7 @@
       li {
         a {
           color: white;
-          font-size: 40px;
+          font-size: 25px;
         }
 
         .dropdown-menu {
@@ -57,4 +67,19 @@
 
 body {
   background-color: black;
+}
+
+.img-fluid {
+  width: 200px;
+
+  height: 200px;
+}
+
+.resource-box {
+  margin: 20px;
+}
+
+.song-title {
+  width: 200px;
+  height: auto;
 }
