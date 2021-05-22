@@ -16,6 +16,7 @@ $(function () {
         },
         success: function (data) {
             console.log(data.items)
+            $('.container.discover-container').hide()
 
             $.each(data.items, function (i, song) {
                 $songs.append(
@@ -47,6 +48,7 @@ $(function () {
 $("body").on('click', '.category-list', function () {
 
     $('.category').hide()
+    $('.container.discover-container').hide()
 
     let category_id = $(this).attr('id');
     console.log("id : " + category_id);
@@ -125,8 +127,10 @@ $("body").on('click', '.playlist-list', function () {
             'Authorization': `Bearer ${token}`,
         },
         success: function (data) {
+            $('.container.discover-container').show()
+
             console.log(data.items)
-            let index = 314;
+            let index = 1;
             $.each(data.items, function (i, song) {
 
 

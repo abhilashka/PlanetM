@@ -173,7 +173,7 @@ $(function () {
                         let name1 = result[0].name;
                         localStorage.setItem('name', name1); console.log(name1);
                         console.log("DOneeeee"); alert("Logged in as " + name1);
-                        location.href = "./ui/home.html";
+                        location.href = "./ui/languagepage.html";
                         console.log("Hello");
                     } else {
                         alert("Wrong credentials!! ");
