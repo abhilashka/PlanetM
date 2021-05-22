@@ -9943,7 +9943,7 @@
           "uri": "spotify:artist:6jJ0s89eD6GaHleKKya26X"
         }
       ],
-     
+
       "external_urls": {
         "spotify": "https://open.spotify.com/album/2kjyPzcMPYUZlB9CJzu10f"
       },
@@ -9987,7 +9987,7 @@
           "uri": "spotify:artist:6l3HvQ5sa6mXTsMTB19rO5"
         }
       ],
-     
+
       "external_urls": {
         "spotify": "https://open.spotify.com/album/4JAvwK4APPArjIsOdGoJXX"
       },
@@ -10031,7 +10031,7 @@
           "uri": "spotify:artist:1McMsnEElThX1knmY4oliG"
         }
       ],
-     
+
       "external_urls": {
         "spotify": "https://open.spotify.com/album/3rMjL8NA5Wh2hbMNk2fSlY"
       },
@@ -10075,7 +10075,7 @@
           "uri": "spotify:artist:0hCNtLu0JehylgoiP8L4Gh"
         }
       ],
-     
+
       "external_urls": {
         "spotify": "https://open.spotify.com/album/2upw5IrzeqKApIQZyx5o6r"
       },
@@ -10119,7 +10119,7 @@
           "uri": "spotify:artist:6oMuImdp5ZcFhWP0ESe6mG"
         }
       ],
-     
+
       "external_urls": {
         "spotify": "https://open.spotify.com/album/7MFj8Fxl8OrEAOyOBSMz51"
       },
@@ -10173,7 +10173,7 @@
           "uri": "spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ"
         }
       ],
-     
+
       "external_urls": {
         "spotify": "https://open.spotify.com/album/5tArdU5M7zWxHPHVL4B7Wv"
       },
@@ -10237,7 +10237,7 @@
           "uri": "spotify:artist:1oPEr1Ci8sWOYj8SSh2VPE"
         }
       ],
-     
+
       "external_urls": {
         "spotify": "https://open.spotify.com/album/0c7bLm2cqhAWQ4BhovOUdm"
       },
@@ -10281,7 +10281,7 @@
           "uri": "spotify:artist:7mnBLXK823vNxN3UWB7Gfz"
         }
       ],
-     
+
       "external_urls": {
         "spotify": "https://open.spotify.com/album/682pJqnx8hcrCfSjvyNBki"
       },
@@ -10369,7 +10369,7 @@
           "uri": "spotify:artist:7bcbShaqKdcyjnmv4Ix8j6"
         }
       ],
-     
+
       "external_urls": {
         "spotify": "https://open.spotify.com/album/654KFpNOZ26Hj9luu7aKeM"
       },
@@ -10398,6 +10398,56 @@
       "total_tracks": 14,
       "type": "album",
       "uri": "spotify:album:654KFpNOZ26Hj9luu7aKeM"
+    }
+  ],
+  "music": [
+    {
+      "id": 1,
+      "url": "../assests/Audio/music1.mp3",
+      "name": "music1",
+      "language": "english",
+      "img": "https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Arijit Singh"
+    },
+    {
+      "id": 2,
+      "url": "https://p.scdn.co/mp3-preview/5f15d7768efe8ef333f3f90900900ba920ad68c3?cid=774b29d4f13844c495f206cafdad9c86",
+      "name": "Taake Jhanke",
+      "language": "hindi",
+      "img": "https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Amit Trivedi"
+    },
+    {
+      "id": 3,
+      "url": "../assests/Audio/music3.mp3",
+      "name": "music3",
+      "language": "marathi",
+      "img": "https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Arijit Singh"
+    },
+    {
+      "id": 4,
+      "url": "../assests/Audio/music4.mp3",
+      "name": "music4",
+      "language": "english",
+      "img": "https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Arijit Singh"
+    },
+    {
+      "id": 5,
+      "url": "../assests/Audio/music5.mp3",
+      "name": "music5",
+      "language": "marathi",
+      "img": "https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Arjit Singh"
+    },
+    {
+      "id": 6,
+      "url": "../assests/Audio/music6.mp3",
+      "name": "music6",
+      "language": "hindi",
+      "img": "https://img.icons8.com/color/96/000000/snitch.png",
+      "artist": "Arijit Singh"
     }
   ]
 }
