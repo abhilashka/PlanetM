@@ -19,7 +19,7 @@ $(function () {
                 $songs.append(
 
                     `
-                    <div class="item">
+                    <div class="item resource-box">
                     <span>${song.name}</span>
 
                     <img src="${song.icons[0].url}" alt="img"> </img>
