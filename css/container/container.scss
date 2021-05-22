@@ -1,11 +1,12 @@
-.container {
+.container1 {
   display: grid;
   width: auto;
   height: auto;
-
+  padding: 130px;
   grid-template-rows: auto 1fr;
   margin: 20px;
-  .row {
+  color: white;
+  .row1 {
     display: flex;
 
     overflow-x: auto;
@@ -43,12 +44,12 @@
       }
 
       .card1-footer {
-        font-size: 1rem;
+        font-size: 10px;
         &:hover {
           text-decoration: underline;
         }
         .title {
-          font-size: 1.5rem;
+          font-size: 15px;
         }
       }
     }
@@ -59,7 +60,7 @@
     grid-template-columns: auto auto;
 
     .title {
-      font-size: 2rem;
+      font-size: 1rem;
       cursor: pointer;
 
       &:hover {
@@ -70,6 +71,7 @@
       font-size: 1rem;
       align-content: baseline;
       cursor: pointer;
+      color: grey;
     }
   }
 }
@@ -87,4 +89,10 @@ html {
   font-size: 62.5%;
   color: white;
   background-color: black;
+}
+
+@media (max-width: 600px) {
+  .container1 {
+    padding: 20px;
+  }
 }

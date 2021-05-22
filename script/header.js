@@ -9,7 +9,7 @@ $(document).ready(function () {
         $('.btn-home-profile').hide()
         $('.btn-home-register').show()
         $('.btn-home-login').show()
-
+     
     }
     else {
         $('.btn-home-register').hide()
@@ -18,6 +18,8 @@ $(document).ready(function () {
         var profilename = localStorage.getItem('name')
         $('#dropdownMenu2').append(` ${profilename}`)
     }
+
+   
 
 
 })
@@ -63,6 +65,7 @@ function library() {
 }
 
 function search() {
+    console.log('serch')
     $('.searchform').show()
 
 }
@@ -70,7 +73,7 @@ function search() {
 
 function logout() {
     localStorage.removeItem('name')
-    location.href = "./index.html";
+    location.href = "../index.html";
 
 }
 
@@ -78,3 +81,4 @@ function profile() {
     location.href = "./ui/userprofile.html";
 
 }
+

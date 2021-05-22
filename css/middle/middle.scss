@@ -3,6 +3,7 @@
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   margin: 40px;
+  margin-top: -50px;
   .row {
     text-align: center;
     align-items: center;
@@ -16,7 +17,7 @@
     }
 
     &:nth-child(2) {
-      font-size: 4rem;
+      font-size: 14px;
     }
     &:nth-child(3) {
       font-size: 2rem;

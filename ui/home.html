@@ -9,12 +9,13 @@
     <!-- title -->
     <title>PlanetM</title>
     <!-- title icon -->
-    <link rel="icon" href="./assests/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="../assests/images/logo.png" type="image/x-icon">
     <!-- css -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="./css/header/header.css">
-    <link rel="stylesheet" href="./css/container/container.css">
-    <link rel="stylesheet" href="./css/middle/middle.css">
+    <link rel="stylesheet" href="../css/language.css">
+    <link rel="stylesheet" href="../css/header/header.css">
+    <link rel="stylesheet" href="../css/container/container.css">
+    <link rel="stylesheet" href="../css/middle/middle.css">
 
 
 
@@ -25,12 +26,12 @@
 
     <!-- css -->
 
-    <!-- <link rel="stylesheet" href="./css/style2.css"> -->
+    <link rel="stylesheet" href="../css/style2.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="./css/login/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/login/styles.css">
 
     <script defer src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
@@ -47,8 +48,10 @@
         }
 
         body {
-            background-color: rgb(0, 0, 0) !important;
+            background-color: black;
         }
+
+
 
 
         a {
@@ -69,11 +72,12 @@
 
 
 
+
     <div class="header">
         <div class="header-menu logo">
 
 
-            <img src="./assests/images/logo1.png" alt="" class="logo-im">
+            <img src="../assests/images/logo1.png" alt="" class="logo-im">
             <div class="logo-text">
                 <span>Planet</span><span>M</span>
 
@@ -82,9 +86,15 @@
         <div class="header-menu main-menu">
 
             <div class="menu-item" id="menu-item">
-                <div class="main-menu-item" onclick=" home()">Home</div>
-                <div class="main-menu-item" onclick=" explore()">Explore</div>
-                <div class="main-menu-item" onclick=" library()">Library</div>
+                <div class="main-menu-item">
+                    <a href="./home.html">Home</a>
+                </div>
+                <div class="main-menu-item">
+                    <a href="./discover.html">Explore</a>
+                </div>
+                <div class="main-menu-item">
+                    <a href="./playlist.html">Playlist</a>
+                </div>
                 <div class="main-menu-item" onclick=" showme()">
                     Search
                 </div>
@@ -185,25 +195,8 @@
     </form>
 
 
+
     <!-- header ended -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -220,6 +213,28 @@
 
 
     </div>
+
+
+
+
+
+
+
+
+    <div class="conatiner">
+        <div class="row">
+            <img src="https://www.youtube.com/img/music/tastebuilder/shelf_thumbnail/v6/IN_992_X_304.png" alt="">
+        </div>
+        <div class="row">Tell us which artists you like</div>
+        <div class="row">We'll create an experience just for you</div>
+        <div class="row">
+            <button>LET'S GO</button>
+        </div>
+
+    </div>
+
+
+
 
 
 
@@ -362,7 +377,7 @@
 
 
 
-    <div class="conatiner">
+    <!-- <div class="conatiner">
         <div class="row">
             <img src="https://www.youtube.com/img/music/tastebuilder/shelf_thumbnail/v6/IN_992_X_304.png" alt="">
         </div>
@@ -373,7 +388,7 @@
         </div>
 
     </div>
-
+ -->
 
     <!-- main ended -->
 
@@ -420,13 +435,13 @@
 
 
     <!-- script -->
-    <script src="./script/script.js"></script>
+    <script src="../script/script.js"></script>
 
-    <script src="./script/container.js"></script>
+    <script src="../script/container.js"></script>
 
-    <script src="./script/header.js"></script>
+    <script src="../script/header.js"></script>
 
-    <script src="./script/login.js"></script>
+    <script src="../script/login.js"></script>
 
 </body>
 

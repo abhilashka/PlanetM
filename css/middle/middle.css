@@ -7,6 +7,7 @@
   -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   margin: 40px;
+  margin-top: -50px;
 }
 
 .conatiner .row {
@@ -29,7 +30,7 @@
 }
 
 .conatiner .row:nth-child(2) {
-  font-size: 4rem;
+  font-size: 14px;
 }
 
 .conatiner .row:nth-child(3) {
