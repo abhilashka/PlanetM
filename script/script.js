@@ -53,7 +53,7 @@ $("#searchmusic").on("keyup", function () {
 
 $("body").on('click', '.resource-box', function () {
   let songurl = $(this).attr('id');
-  alert("Played : " + songurl);
+  // alert("Played : " + songurl);
 });
 
 // });   
