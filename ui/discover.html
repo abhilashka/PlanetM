@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/language.css">
     <link rel="stylesheet" href="../css/header/header.css">
 
-
+    <link rel="stylesheet" href="../tracks.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -30,6 +30,21 @@
     <link rel="stylesheet" type="text/css" href="../css/login/styles.css">
 
     <script defer src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <style>
+        body {
+            background-color: rgb(16,16,16);
+        }
+
+        a {
+            color: white
+        }
+
+        a:hover {
+            color: rgb(101, 211, 110);
+            ;
+        }
+    </style>
 
 </head>
 
@@ -176,9 +191,25 @@
 
 
 
-    <div class="discover-container tracks"" id="tracks">
-    </div>
 
+
+    <div class="container discover-container tracks">
+        <div class="row md-col-4">
+            <table class=" table table-borderless" style="color: white">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+
+                        <th scope="col">Title</th>
+                        <th scope="col">Duration</th>
+                    </tr>
+                </thead>
+                <tbody id="tracks">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
 

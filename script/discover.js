@@ -1,4 +1,4 @@
-var token = `BQAQyS_zL92y6uFm4GtHbCrj4HMsY7FyteMcgCKhgIp7756-46VYSQxaq-k8hPRgQnV1NlX7yzLi-yVRbptvfqxoMjOWlBb5gFuDMi6Z0nlV1-DbE5lPZqC2egjaV8cjHB2Ae2ZkDT_JUbd0siDkGP_-CtJSm2IgZYFb_mecqzkxT-e9QFharWRnmO5brrkrpBBgEoB7OfsHQzl3Dp7ux8nRKOnR7uTpv0rdHoTb3cPXfh4fSMqwoRYR1F_LAh5Z_mJ4aQiLiuwOYeo7Nu9nJXy8dwiuCuvOd3-Oy7GU0_dK`;
+var token = `BQCEeEybkCuOmo88U4kOhforkNwOh1-aWWg1f5S8y6onqEZ6-GQ42mxrhlsp4S0vTPfD7Ox8qsC3SQZ0Qr8adb3Gs8EcORcQ61ljUBnQjaBrh62-LGDcmydIacphBduii30o_2Y5V7YztdahPc4T1p1lU4dMtTS078i5_QvIBqqpqlTARJ0BIxe8GQXPDWFAjf1jLZBSR5fdilNITNlPXJSSbx8UI3vUnfHZXDTLIbWzzLHQyz1SlKUEED61OqGZilM2V55lnvBLLI9nGV9pCTMzlcdfkDXnE9HWGMzvj0Px`;
 
 
 $(function () {
@@ -71,16 +71,19 @@ $("body").on('click', '.category-list', function () {
             console.log(data.playlists.items)
 
             $.each(data.playlists.items, function (i, song) {
-                $playlist.append(
 
-                    `
-                    <div class="item resource-box playlist-list" id="${song.id}">
-                    <span>${song.description}</span>
 
-                    <img src="${song.images[0].url}" alt="img"> </img>
-                    </div>
-                    `
-                )
+                $playlist.append(`
+                <div class="resource-box playlist-list" style="width: 12rem;" id="${song.id}">
+                <img class="card-img-top" src="${song.images[0].url}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title" style="color:white;">
+                        ${song.name}
+                    </h5>
+                    <p class="card-text">${song.description}.</p>
+                   
+                </div>
+            </div>`)
 
             });
 
@@ -123,18 +126,28 @@ $("body").on('click', '.playlist-list', function () {
         },
         success: function (data) {
             console.log(data.items)
-
+            let index = 1;
             $.each(data.items, function (i, song) {
+
+                let duration = millisToMinutesAndSeconds(`${song.track.duration_ms}`)
+
                 $tracks.append(
 
                     `
-                    <div class="item resource-box" id="">
-                    <span>${song.track.name}</span>
 
-                    <img src="${song.track.album.images[1].url}" alt="img"> </img>
-                    </div>
+                    <tr class="resource-box">
+                    <td scope="row">${index}</td>
+                    
+                    <td>
+                    <img src="${song.track.album.images[1].url}" style="width:40px; height:40px; border-radius:50% "></img>
+                     <a href="">${song.track.name} </a>  ,    <span style="color:rgb(75, 74, 74); font-style: italic;">  ${song.track.artists[0].name}</span> </td>
+                    <td>${duration}</td>
+                  </tr>
+          
+                  
                     `
                 )
+                index = index + 1
 
             });
 
@@ -146,5 +159,11 @@ $("body").on('click', '.playlist-list', function () {
         }
     });
 
-
+    function millisToMinutesAndSeconds(millis) {
+        var minutes = Math.floor(millis / 60000);
+        var seconds = ((millis % 60000) / 1000).toFixed(0);
+        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+    }
 });
+
+

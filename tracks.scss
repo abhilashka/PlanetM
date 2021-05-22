@@ -1,0 +1,17 @@
+.track-container {
+  display: grid;
+  grid-template-rows: 2fr auto;
+  border: 1px solid red;
+  .headline{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(75, 74, 74);
+
+  }
+
+  .track{
+    display: flex;
+    justify-content: space-between;
+    background-color: green;
+  }
+}
