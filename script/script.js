@@ -13,7 +13,7 @@ let ajax1 = $.ajax({
     let products = "";
     $.each(data, function (i, v) {
       products += `
-                <div class="resource-box">
+                <div class="resource-box" >
                 <div id=${v.url}>
                 <div class="song-image">
                 <img class="img-fluid" src=${v.img} />
