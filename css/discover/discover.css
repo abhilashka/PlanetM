@@ -8,6 +8,7 @@
 }
 
 .discover-container {
+  padding-top: 100px;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -15,20 +16,20 @@
           justify-content: center;
   -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: black;
 }
 
 .discover-container .item {
   width: 200px;
   height: 200px;
   margin: 10px;
+  padding: 10px;
   cursor: pointer;
 }
 
 .discover-container .item span {
-  position: relative;
-  top: 30px;
   margin-left: 10px;
-  font-size: 2rem;
+  font-size: 1rem;
   color: white;
   font-weight: 100;
 }

@@ -4,313 +4,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>header</title>
+    <link rel="stylesheet" href="../../css/header/header.css">
 
-    <link rel="stylesheet" href="../../css/header/nav.css">
-<style>
-    .lorem{
-        background-color: red;
-        font-size: 3rem;
-    }
-</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="../../css/login/styles.css">
+
+    <script defer src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
 </head>
 
 <body>
-    <div class="nav" style=" position: sticky ;
-    top: 0px;">
-        <div class="nav-item">
+
+    <div class="header">
+        <div class="header-menu logo">
+
 
             <img src="../../assests/images/logo1.png" alt="" class="logo-im">
-            <span>Planet</span><span>M</span>
+            <div class="logo-text">
+                <span>Planet</span><span>M</span>
+
+            </div>
+        </div>
+        <div class="header-menu main-menu">
+
+            <div class="menu-item" id="menu-item">
+                <div class="main-menu-item" onclick=" home()">Home</div>
+                <div class="main-menu-item" onclick=" explore()">Explore</div>
+                <div class="main-menu-item" onclick=" library()">Library</div>
+                <div class="main-menu-item" onclick=" showme()">
+                    Search
+                </div>
+
+                <div class="main-menu-item searchbar" id="menu-search">
+                    <form>
+                        <input class="form-control mr-l-2 hideme" type="search" id="searchmusic" placeholder="Search"
+                            aria-label="Search" style="border-radius: 50px;">
+                    </form>
+
+
+                </div>
+
+            </div>
+
+            <div class="menu-symbol" id="menu-symbol">
+                <div class="main-menu-item" onclick=" home()">
+                    <svg viewBox="0 0 24 24" class="nav-item-icon" onclick="home()">
+                        <g>
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z">
+                                Home
+                            </path>
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="main-menu-item" onclick=" explore()">
+                    <svg viewBox="0 0 24 24" class="nav-item-icon">
+                        <g>
+                            <path d=" M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1c.61 0 1.1-.49 1.1-1.1s-.49-1.1-1.1-1.1zM12
+                        2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z">
+                            </path>
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="main-menu-item" onclick=" library()">
+                    <!-- Library -->
+                    <svg viewBox="0 0 24 24" class="nav-item-icon" onclick="library()">
+                        <g>
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5c0 1.38-1.12 2.5-2.5 2.5S10 13.88 10 12.5s1.12-2.5 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="main-menu-item" onclick=" search()">
+                    <!-- search -->
+                    <svg viewBox="0 0 24 24" class="nav-item-icon" onclick="search()">
+                        <g>
+                            <path
+                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                            </path>
+                        </g>
+                    </svg></div>
+            </div>
+
 
         </div>
-        <div class="nav-item">
+        <div class="header-menu" style="display: flex;justify-content: flex-end;">
+            <button type="button" class="btn btn-home-register rounded-pill" data-backdrop="static"
+                data-keyboard="false" data-toggle="modal" data-target="#Modal-Register">
+                SIGN UP
+            </button>
 
-            <span>Home</span>
-            <svg viewBox="0 0 24 24" class="nav-item-icon">
-                <g>
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z">
-                        Home
-                    </path>
-                </g>
-            </svg>
-
-
-
-            <span>Explore</span>
-
-            <svg viewBox="0 0 24 24" class="nav-item-icon">
-                <g>
-                    <path
-                        d="M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1c.61 0 1.1-.49 1.1-1.1s-.49-1.1-1.1-1.1zM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z">
-                    </path>
-                    <path d="M0 0h24v24H0z" fill="none"></path>
-                </g>
-            </svg>
-
-
-
-            <span>Library</span>
-
-            <!-- Library -->
-            <svg viewBox="0 0 24 24" class="nav-item-icon">
-                <g>
-                    <path d="M0 0h24v24H0z" fill="none"></path>
-                    <path
-                        d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5c0 1.38-1.12 2.5-2.5 2.5S10 13.88 10 12.5s1.12-2.5 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z">
-                    </path>
-                </g>
-            </svg>
-
-
-
-            <span>Search</span>
-
-            <!-- search -->
-            <svg viewBox="0 0 24 24" class="nav-item-icon">
-                <g>
-                    <path
-                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-                    </path>
-                </g>
-            </svg>
-
+            <div class="header-menu"> <button type="button" class="btn btn-home-login rounded-pill"
+                    data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#Modal-Login">
+                    LOGIN
+                </button></div>
         </div>
-        <div class="nav-item">
-            <a href=""> Login </a>
-            <!-- <span>Username:</span> -->
-        </div>
-    </div>
 
-    <div class="lorem">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nisi ex eum libero, eius cumque itaque
-        consequuntur similique officia. Corporis laborum perferendis asperiores, non ullam totam, voluptatum doloremque
-        quaerat labore facere quia deleniti laboriosam sequi doloribus velit quas, rem perspiciatis? Adipisci similique
-        quo sapiente, eaque quaerat eos dolorem eius nulla alias nemo corporis, repellendus in. Accusantium ut totam
-        error dignissimos, ad quis, ducimus voluptas impedit cupiditate aperiam ullam hic earum temporibus! Eius magnam
-        laborum, dolorum impedit dolores sequi nesciunt cupiditate natus distinctio incidunt vel id suscipit dicta odio
-        adipisci atque autem voluptas nulla debitis. Et earum ipsa enim culpa voluptatum!
+
+
+
+
+
     </div>
 
 
+
+    <form class="searchform">
+        <input class="form-control mr-l-2 hideme" type="search" id="searchmusic" placeholder="Search"
+            aria-label="Search">
+    </form>
+
+
+
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsa ex repellendus nobis cumque necessitatibus?
+        Similique eum, est omnis ea aliquid voluptates! Modi cupiditate nesciunt libero ullam corporis natus velit,
+        exercitationem possimus illum iusto porro voluptate quia, recusandae minima officia quasi minus corrupti earum
+        dignissimos asperiores, doloribus sunt voluptas praesentium. Architecto reprehenderit quaerat ullam ab vero amet
+        alias nihil obcaecati, veniam placeat nam dolore numquam at laudantium eos cupiditate deserunt voluptas dolor
+        quis tempore. Possimus laboriosam dolor obcaecati delectus iusto veniam voluptas consequatur, odit impedit minus
+        praesentium qui a voluptatem natus? Aut molestias, alias officia saepe debitis mollitia ad eum labore
+        consequatur, rerum iste magni id maxime eos, asperiores recusandae beatae nihil deleniti ullam magnam maiores
+        sed dicta vel voluptatem. Autem sunt earum eveniet quisquam iusto saepe, voluptatum delectus quae aliquam ullam
+        tempora omnis eaque magnam ducimus. Recusandae illo facilis odit, quas laborum fugit rerum nihil voluptates
+        aliquid perspiciatis dolore laboriosam facere labore, eligendi vitae praesentium consequuntur rem pariatur
+        corrupti. Dolore, dolores fuga placeat voluptas culpa deserunt? Tempora id voluptatibus quam qui! Et, eum.
+        Reprehenderit quos doloribus sint repellat possimus enim. Porro enim earum adipisci soluta eaque libero!
+        Officiis laboriosam totam, iste error delectus sunt quam illum ex. Maxime velit veniam officiis animi eveniet
+        reprehenderit quas dolorem, laudantium tenetur esse error eos commodi excepturi, rem porro optio omnis ratione
+        consequatur atque nulla soluta voluptates earum nihil. Iste at ratione alias ab error. Officia iusto provident
+        cumque aspernatur facere est laborum consequuntur eum deserunt veritatis amet suscipit eos vitae voluptate
+        accusamus rerum, atque quibusdam sit soluta incidunt? Expedita alias laboriosam quaerat officia maiores dolor
+        nulla dolores quidem, commodi perspiciatis ipsam accusantium pariatur quo ad soluta! At, possimus sed voluptas
+        quisquam harum eos vel consequuntur atque porro aperiam, nulla totam aut ullam. Cum debitis placeat facilis a
+        nihil corporis quas, illo autem molestiae ducimus. Itaque modi quam iusto enim doloribus vitae accusantium
+        quaerat voluptatibus id sunt quod culpa dolore consectetur totam cupiditate sit obcaecati reprehenderit sequi,
+        molestias necessitatibus, distinctio nobis fugit aperiam quibusdam. Aliquam distinctio quod ex quasi aut
+        voluptates harum repellendus, quas laboriosam natus beatae dolore blanditiis quam et nulla sed esse dolorum
+        facilis possimus facere? Accusantium quod, facere beatae minus tempore eum rerum consectetur corporis
+        exercitationem, quis quo doloribus neque, totam maiores illum sed deleniti recusandae officiis nihil quia? Eius,
+        hic, magni pariatur nemo a doloribus quos officia velit similique illo tempore maxime ipsa maiores asperiores
+        culpa quam! Commodi fugiat nisi saepe laudantium, deleniti numquam? Amet est et excepturi repudiandae in quidem,
+        eum quod nulla. A earum similique nulla cupiditate. Laudantium consectetur quasi placeat quibusdam laboriosam
+        consequuntur quaerat natus facilis maxime doloremque beatae praesentium excepturi neque ea alias sequi libero
+        sit omnis, error fugit architecto sunt? Deserunt provident doloribus architecto cumque labore commodi explicabo
+        deleniti mollitia, quia dicta illo nulla velit iusto voluptas at consequatur culpa. Repellat accusantium
+        voluptatibus sunt dolorem libero iste, debitis, maiores velit error magni sit repellendus, totam beatae aliquid
+        deserunt architecto dolor. Dicta harum laborum dolorem temporibus nobis ex nam, mollitia quo minima repellendus
+        tempora exercitationem quisquam cupiditate eum unde delectus quod praesentium eligendi iste voluptatibus
+        consequuntur. Voluptatibus nihil odio in neque fugit praesentium quos nam excepturi velit quisquam quam dolorem
+        ut, temporibus aliquid perferendis quis animi voluptas quod mollitia aut. Alias minima praesentium neque
+        voluptatum deleniti, delectus dignissimos! Impedit asperiores pariatur soluta, voluptate qui architecto et
+        maxime tenetur, quos, ipsum nostrum dignissimos sint incidunt possimus ea accusamus dicta dolore mollitia
+        eveniet voluptatibus. Sit, facilis laudantium pariatur quasi officia ducimus possimus laborum veritatis ea rem
+        suscipit commodi explicabo, asperiores ad eum nisi minima autem doloribus maxime. Culpa modi numquam inventore
+        ad, sunt nesciunt expedita quaerat nostrum, alias repellendus odit ipsum consequuntur, et temporibus. Quae
+        deleniti culpa odio consequuntur maiores inventore error unde numquam minus beatae, iusto quam ducimus, enim
+        optio quia corrupti architecto quod aliquid repudiandae sint velit. Nostrum fugit dignissimos maiores! Natus
+        quidem facere provident ex itaque! Ratione voluptate quasi, perspiciatis corrupti repellat ex. Nobis, est
+        adipisci neque nulla fugiat rerum quas placeat laudantium velit optio ipsa. Voluptatum cum reiciendis officia
+        placeat neque dolor veritatis unde necessitatibus ex quas magni ab illum minus sit recusandae explicabo vero
+        eius dolores similique possimus quasi, eligendi nostrum quos corrupti. Magni ipsa est maiores sit labore
+        perferendis odit libero quam, explicabo cupiditate placeat facere? Et iure sequi voluptas ad provident error
+        nesciunt, repellat numquam voluptatum, corporis eveniet cumque asperiores quia officiis minus, tenetur ratione
+        aperiam alias earum perferendis dignissimos laudantium minima! Ex incidunt dolorem amet laudantium perspiciatis
+        ab asperiores distinctio! Ea rerum illum necessitatibus adipisci voluptatum in at iste. Qui repellat sapiente
+        dolorem quasi officiis aut reiciendis recusandae beatae amet culpa aperiam sequi magni distinctio ullam ratione
+        cupiditate illo ad mollitia asperiores, consequuntur esse, quod eaque sint natus? Neque ipsam ipsa esse quis
+        laborum alias recusandae voluptate saepe nemo enim officiis repudiandae possimus, molestiae rerum nobis
+        consequatur odit quae porro. Blanditiis porro nulla, voluptatem quo doloremque debitis voluptates accusamus
+        dignissimos, ducimus odit ullam animi. Quos repudiandae ipsam eligendi rerum distinctio commodi facilis ratione
+        provident similique consectetur deserunt harum excepturi odit nobis magnam voluptatum, ipsa aut id. At obcaecati
+        possimus eveniet inventore ipsam similique quasi magnam! Dicta, vel perferendis? Vero iusto expedita nobis
+        debitis, nulla sapiente molestiae cum facere consectetur inventore ad velit, dolorem, cumque architecto
+        recusandae possimus exercitationem accusamus. Quis aut est laboriosam optio labore molestiae porro, praesentium
+        atque ex ut. Quae error delectus beatae incidunt eveniet voluptatibus est deleniti voluptas eligendi quas
+        corrupti tempora explicabo earum velit, at nemo, impedit consectetur nihil placeat odio enim nisi voluptate?
+        Distinctio consequatur quod consectetur vero quae. Laboriosam, impedit nihil. Architecto optio officiis maiores?
+        Explicabo fugit earum aperiam qui rem, repellendus mollitia illum, reiciendis voluptatum pariatur placeat non
+        sint reprehenderit expedita? Fugit ut dolore libero eaque maxime deserunt doloribus doloremque consectetur culpa
+        soluta dolorum, at blanditiis iure hic accusamus minus ducimus alias, ab aut itaque nesciunt, ratione facilis?
+        Optio, nam? Nesciunt assumenda expedita praesentium iusto, odio nulla similique beatae laudantium impedit qui
+        facere quas quia delectus placeat sed. Quis harum, enim optio, porro officia sint atque beatae minus obcaecati
+        fugiat nobis libero?
+    </div>
+
+
+
+
+
+    <!-- modal -->
+    <!-- Modal for Login -->
+    <div class="modal fade" id="Modal-Login" tabindex="-1" role="dialog" aria-labelledby="Modal-Login"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Modal-Login">Welcome to Planet M</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <form action="" id="login_form">
+                        <div class="form-group">
+                            <label for="username">Enter your Email id or phone </label>
+                            <input type="text" id="username" class="form-control rounded-pill"
+                                placeholder="Enter your Email id or phone.">
+                            <div id="error-user" class="rounded-pill">Please enter your valid email or phone.</div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Enter your password</label>
+                            <input type="password" id="pass" class="form-control rounded-pill"
+                                placeholder="Enter your password.">
+                            <div id="error-password" class="rounded-pill">Please enter valid name.</div>
+
+                        </div>
+                        <input type="submit" value="Login" class="btn btn-success rounded-pill" name=""
+                            id="btn-modal-login">
+                    </form>
+                </div>
+                <div class="modal-footer"> <strong> Don't have an Account ?</strong>
+                    <button id="registration-btn" class="btn btn-sm btn-outline-secondary rounded-pill"
+                        data-dismiss="modal" data-toggle="modal" data-target="#Modal-Register"> Register here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal For Register -->
+    <div class="modal fade" id="Modal-Register" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="Modal-RegisterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Modal-RegisterTitle">Welcome to Planet M</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="reg-form" autocomplete="on" id="registration_form" name="form" method="POST">
+                        <div class="form-group">
+                            <label for="name">Enter your Full Name</label>
+                            <input type="text" id="name" class="form-control rounded-pill"
+                                placeholder="Enter your Full Name.">
+                            <div id="error-name" class="rounded-pill">Please enter a valid name.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Enter your email id</label>
+                            <input type="email" id="email" class="form-control rounded-pill"
+                                placeholder="Enter your valid email id.">
+                            <div id="error-email" class="rounded-pill">Please enter a valid email id.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Enter your Mobile Number</label>
+                            <input type="tel" id="phone" class="form-control rounded-pill"
+                                placeholder="Enter your 10 digits number.">
+                            <div id="error-phone" class="rounded-pill">Please enter 10 digit mobile number.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="passw">Enter your password</label>
+                            <input type="password" id="passw" class="form-control rounded-pill" name="password"
+                                placeholder="Enter your Password.">
+                            <div id="error-reg-pass" class="rounded-pill">Minimum 8 characters required.</div>
+                        </div>
+
+                        <div class="form-group" id="pass-div">
+                            <label for="repass">Confirm Password</label>
+                            <input type="password" id="repass" class="form-control rounded-pill"
+                                placeholder="Confirm Password.">
+                            <div id="error-reg-confpass" class="rounded-pill">Passwords don't match.</div>
+                        </div>
+
+                        <input id="btn-modal-reg" type="submit" value="Register"
+                            class="btn  btn-modal-reg rounded-pill">
+
+                    </form>
+                </div>
+                <div class="modal-footer"> <strong> Already have an Account? </strong>
+                    <button id="login-btn" class="btn btn-outline-secondary rounded-pill" data-dismiss="modal"
+                        data-toggle="modal" data-target="#Modal-Login"> Login here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- bootstap js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+
+    <script src="../../script/header.js"></script>
 </body>
 
 </html>

@@ -1,14 +1,16 @@
-.container {
+.container1 {
   display: -ms-grid;
   display: grid;
   width: auto;
   height: auto;
+  padding: 130px;
   -ms-grid-rows: auto 1fr;
       grid-template-rows: auto 1fr;
   margin: 20px;
+  color: white;
 }
 
-.container .row {
+.container1 .row1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,16 +23,16 @@
           align-items: center;
 }
 
-.container .row::-webkit-scrollbar {
+.container1 .row1::-webkit-scrollbar {
   display: none;
 }
 
-.container .row .card {
+.container1 .row1 .card1 {
   margin: 10px;
   cursor: pointer;
 }
 
-.container .row .card .card-body {
+.container1 .row1 .card1 .card1-body {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -40,7 +42,7 @@
       grid-template-columns: auto;
 }
 
-.container .row .card .card-body .image-logo {
+.container1 .row1 .card1 .card1-body .image-logo {
   display: -ms-grid;
   display: grid;
   border-radius: 3px;
@@ -57,25 +59,25 @@
   background-blend-mode: lighten;
 }
 
-.container .row .card .card-body .image-logo img {
+.container1 .row1 .card1 .card1-body .image-logo img {
   border-radius: 2px;
   width: 100px;
   height: 100px;
 }
 
-.container .row .card .card-footer {
-  font-size: 1rem;
+.container1 .row1 .card1 .card1-footer {
+  font-size: 10px;
 }
 
-.container .row .card .card-footer:hover {
+.container1 .row1 .card1 .card1-footer:hover {
   text-decoration: underline;
 }
 
-.container .row .card .card-footer .title {
-  font-size: 1.5rem;
+.container1 .row1 .card1 .card1-footer .title {
+  font-size: 15px;
 }
 
-.container .container-headline {
+.container1 .container-headline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,20 +85,21 @@
       grid-template-columns: auto auto;
 }
 
-.container .container-headline .title {
-  font-size: 2rem;
+.container1 .container-headline .title {
+  font-size: 1rem;
   cursor: pointer;
 }
 
-.container .container-headline .title:hover {
+.container1 .container-headline .title:hover {
   text-decoration: underline;
 }
 
-.container .container-headline .sub-title {
+.container1 .container-headline .sub-title {
   font-size: 1rem;
   -ms-flex-line-pack: baseline;
       align-content: baseline;
   cursor: pointer;
+  color: grey;
 }
 
 @font-face {
@@ -112,5 +115,11 @@ html {
   font-size: 62.5%;
   color: white;
   background-color: black;
+}
+
+@media (max-width: 600px) {
+  .container1 {
+    padding: 20px;
+  }
 }
 /*# sourceMappingURL=container.css.map */

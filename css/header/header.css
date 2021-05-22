@@ -1,0 +1,136 @@
+@font-face {
+  font-family: myfont;
+  src: url(./font3.otf);
+}
+
+* {
+  font-family: myfont;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 6fr 1fr;
+      grid-template-columns: 1fr 6fr 1fr;
+  width: 100%;
+  height: 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: black;
+  color: white;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  position: fixed;
+  margin-bottom: 50px;
+  top: 0px;
+}
+
+.header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  cursor: pointer;
+}
+
+.header .logo img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.header .logo span {
+  font-size: 2rem;
+  letter-spacing: -0.06em;
+  color: white;
+  font-family: myfont;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.header .logo :last-child {
+  font-size: 2.3rem;
+  color: #65d36e;
+}
+
+.header .header-menu {
+  width: auto;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .main-menu {
+  width: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[1];
+      grid-template-columns: repeat(1, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: #818181;
+  cursor: pointer;
+}
+
+.header .main-menu .searchbar {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.header .main-menu .menu-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
+  grid-gap: 90px;
+}
+
+.header .main-menu .menu-item .main-menu-item {
+  height: auto;
+}
+
+.header .main-menu .menu-item .main-menu-item:hover {
+  color: white;
+}
+
+.header .main-menu .menu-symbol {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+}
+
+.header .main-menu .menu-symbol .main-menu-item .nav-item-icon {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+
+@media (max-width: 600px) {
+  .btn-home-register {
+    font-size: 1px;
+  }
+}
+
+html {
+  background-color: black;
+}
+/*# sourceMappingURL=header.css.map */

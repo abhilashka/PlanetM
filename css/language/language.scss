@@ -1,0 +1,85 @@
+* {
+  font-family: myFirstFont, Helvetica Neue, helvetica, arial,
+    Hiragino Kaku Gothic Pro, Meiryo, MS Gothic, sans-serif;
+}
+
+.inside-main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+}
+
+.form-inline {
+  display: flex;
+}
+
+.menu-list {
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 70px;
+  width: 100%;
+
+  .menu-item {
+    display: flex;
+    justify-content: space-around;
+
+    h1 {
+      font-size: 25px;
+      position: relative;
+      top: 14px;
+      right: -39px;
+    }
+
+    ul {
+      border: 1px solid black;
+      color: rgb(236, 184, 184);
+      font-size: 30px;
+      list-style-type: none;
+
+      li {
+        a {
+          color: white;
+          font-size: 25px;
+        }
+
+        .dropdown-menu {
+          .dropdown-item {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-list .menu-item ul li .dropdown-menu .dropdown-item {
+  background-color: black;
+  width: 233px;
+}
+
+body {
+  background-color: black;
+}
+
+.img-fluid {
+  width: 200px;
+
+  height: 200px;
+}
+
+.resource-box {
+  margin: 20px;
+}
+
+.song-title {
+  width: 200px;
+  height: auto;
+}
