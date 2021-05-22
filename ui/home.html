@@ -4,18 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlist</title>
-    <link rel="stylesheet" href="../css/playlist/playlist.css">
 
 
-    <!-- bootstap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../css/header/nav.css">
-
-
-
+    <!-- title -->
+    <title>PlanetM</title>
+    <!-- title icon -->
+    <link rel="icon" href="../assests/images/logo.png" type="image/x-icon">
+    <!-- css -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/language.css">
     <link rel="stylesheet" href="../css/header/header.css">
@@ -38,9 +33,30 @@
 
     <script defer src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
+
+    <style>
+        @font-face {
+            font-family: myfont;
+            src: url(./font3.otf);
+        }
+
+        * {
+
+            font-family: myfont;
+        }
+
+        html {
+            background-color: white;
+        }
+    </style>
+
 </head>
 
 <body>
+
+    <!-- header started -->
+
+
 
 
     <div class="header">
@@ -166,14 +182,35 @@
 
 
 
+    <!-- header ended -->
 
 
 
 
-    <div class="playlist-container" id="playlist">
-        <div class="playlist-item create"
-            style="background-image: url(https://www.gstatic.com/youtube/media/ytm/images/pbg/create-playlist-@210.png);"
-            data-toggle="modal" data-target="#exampleModal">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="main-content">
+        <div class="title-container"></div>
+        <p class="library-sub-title1">Trending Now</p>
+    </div>
+    <div class="displaysong">
+        <div class="inside-main-content">
+            <!--Songs are being displayed here-->
         </div>
     </div>
 
@@ -186,47 +223,60 @@
 
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- modal -->
+    <!-- Modal for Login -->
+    <div class="modal fade" id="Modal-Login" tabindex="-1" role="dialog" aria-labelledby="Modal-Login"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create playlist</h5>
+                    <h5 class="modal-title" id="Modal-Login">Welcome to Planet M</h5>
+
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">X</span>
                     </button>
+
                 </div>
                 <div class="modal-body">
-                    <form id="form" action="" method="post">
+                    <form action="" id="login_form">
                         <div class="form-group">
-                            <label for="title">Title</label>
-                            <input type="text" class="form-control" id="title" placeholder="title" name="title">
-                        </div>
+                            <label for="username">Enter your Email id or phone </label>
+                            <input type="text" id="username" class="form-control rounded-pill"
+                                placeholder="Enter your Email id or phone.">
+                            <div id="error-user" class="rounded-pill">Please enter your valid email or phone.</div>
 
+                        </div>
                         <div class="form-group">
-                            <label for="description">Description</label>
-                            <input type="text" class="form-control" id="description" placeholder="description"
-                                name="description">
-                        </div>
-
-                        <div class="modal-footer">
-
-                            <input id="submit" type="button" class="btn btn-primary" name="submit" value="SAVE"
-                                data-dismiss="modal">
-
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <label for="pass">Enter your password</label>
+                            <input type="password" id="pass" class="form-control rounded-pill"
+                                placeholder="Enter your password.">
+                            <div id="error-password" class="rounded-pill">Please enter valid name.</div>
 
                         </div>
+                        <input type="submit" value="Login" class="btn btn-success rounded-pill" name=""
+                            id="btn-modal-login">
                     </form>
-
-
-
-
-
-
                 </div>
-
+                <div class="modal-footer"> <strong> Don't have an Account ?</strong>
+                    <button id="registration-btn" class="btn btn-sm btn-outline-secondary rounded-pill"
+                        data-dismiss="modal" data-toggle="modal" data-target="#Modal-Register"> Register here</button>
+                </div>
             </div>
         </div>
     </div>
@@ -234,19 +284,119 @@
 
 
 
+    <!-- Modal For Register -->
+    <div class="modal fade" id="Modal-Register" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="Modal-RegisterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Modal-RegisterTitle">Welcome to Planet M</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="reg-form" autocomplete="on" id="registration_form" name="form" method="POST">
+                        <div class="form-group">
+                            <label for="name">Enter your Full Name</label>
+                            <input type="text" id="name" class="form-control rounded-pill"
+                                placeholder="Enter your Full Name.">
+                            <div id="error-name" class="rounded-pill">Please enter a valid name.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Enter your email id</label>
+                            <input type="email" id="email" class="form-control rounded-pill"
+                                placeholder="Enter your valid email id.">
+                            <div id="error-email" class="rounded-pill">Please enter a valid email id.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Enter your Mobile Number</label>
+                            <input type="tel" id="phone" class="form-control rounded-pill"
+                                placeholder="Enter your 10 digits number.">
+                            <div id="error-phone" class="rounded-pill">Please enter 10 digit mobile number.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="passw">Enter your password</label>
+                            <input type="password" id="passw" class="form-control rounded-pill" name="password"
+                                placeholder="Enter your Password.">
+                            <div id="error-reg-pass" class="rounded-pill">Minimum 8 characters required.</div>
+                        </div>
+
+                        <div class="form-group" id="pass-div">
+                            <label for="repass">Confirm Password</label>
+                            <input type="password" id="repass" class="form-control rounded-pill"
+                                placeholder="Confirm Password.">
+                            <div id="error-reg-confpass" class="rounded-pill">Passwords don't match.</div>
+                        </div>
+
+                        <input id="btn-modal-reg" type="submit" value="Register"
+                            class="btn  btn-modal-reg rounded-pill">
+
+                    </form>
+                </div>
+                <div class="modal-footer"> <strong> Already have an Account? </strong>
+                    <button id="login-btn" class="btn btn-outline-secondary rounded-pill" data-dismiss="modal"
+                        data-toggle="modal" data-target="#Modal-Login"> Login here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modal end -->
 
 
 
+
+
+
+
+    <!-- main started -->
+
+
+
+
+    <!-- <div class="conatiner">
+        <div class="row">
+            <img src="https://www.youtube.com/img/music/tastebuilder/shelf_thumbnail/v6/IN_992_X_304.png" alt="">
+        </div>
+        <div class="row">Tell us which artists you like</div>
+        <div class="row">We'll create an experience just for you</div>
+        <div class="row">
+            <button>LET'S GO</button>
+        </div>
+
+    </div>
+ -->
+
+    <!-- main ended -->
+
+
+
+
+
+    <!-- footer started -->
+    <footer></footer>
+    <!-- footer started -->
+
+
+
+
+
+    <!-- bootstap js -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 
 
 
@@ -274,8 +424,6 @@
     <script src="../script/header.js"></script>
 
     <script src="../script/login.js"></script>
-
-    <script src="../script/playground.js"></script>
 
 </body>
 
