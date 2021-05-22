@@ -12,7 +12,7 @@ $(function () {
                 // $songs.append('<div class="card md-col-2" style="width: 18rem;">  <div class="card-body"> <div class="card-title"> <h4>' + song.title + '</h4><div class="card-text"> ' + song.author + '</div>' + ' </div></div> </div>');
                 $songs.append(
                     `
-                    <div class="card1">
+                    <div class="card1 resource-box">
                     <div class="card1-body"  >
                         <div class="image-logo" style="   background-image:url(${song.images[0].url});     background-size: 600px 600px;"
                            >
