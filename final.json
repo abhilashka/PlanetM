@@ -9156,11 +9156,12 @@
   ],
   "users": [
     {
-      "name": "aa aa",
-      "email": "a@gmail.com",
+      "name": "abhilash",
+      "email": "cyril@gmail.com",
       "mobile": "9000000000",
       "password": "12121212",
-      "id": 1
+      "id": 1,
+      "contact": "9977146755"
     },
     {
       "name": "ras",
@@ -9212,11 +9213,12 @@
       "id": 8
     },
     {
-      "name": "cyril si",
+      "name": "cyril new",
       "email": "dude@gmail.com",
       "mobile": "9874563219",
       "password": "MTIzNDU2Nzg5",
-      "id": 9
+      "id": 9,
+      "contact": "9977141714"
     },
     {
       "name": "sks",
