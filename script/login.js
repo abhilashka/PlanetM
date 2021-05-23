@@ -1,6 +1,5 @@
-let logged_in = false;
 $(function () {
-    let error_username = false;
+    let error_user = false;
     let error_password = false;
     let error_fname = false;
     let error_email = false;
@@ -9,52 +8,16 @@ $(function () {
     let error_retype_password = false;
 
 
-
-
-    $("#error-user").hide();
-    $("#error-password").hide();
-    $("#error-name").hide();
-    $("#error-email").hide();
-    $("#error-phone").hide();
-    $("#error-reg-pass").hide();
-    $("#error-reg-confpass").hide();
-
-
-    $("btn-home-logout").hide();
-
-
-
-    $("#username").keyup(function () {
-        check_username();
-    });
-    $("#pass").keyup(function () {
-        check_password();
-    });
-    $("#name").keyup(function () {
-        check_fname();
-    });
-    $("#email").keyup(function () {
-        check_email();
-    });
-    $("#phone").keyup(function () {
-        check_phone()
-    });
-    $("#passw").keyup(function () {
-        check_passw();
-    });
-    $("#repass").keyup(function () {
-        check_retype_password();
-    });
+    $(".error-msg").hide()
 
     //username validation starts
-    function check_username() {
+    function check_user() {
         let value = $('#username').val()
         let expression = /^[6-9]\d{9}|([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
         if (value = '' || !value.match(expression)) {
             $('#error-user').show()
-            error_username = true
+            error_user = true
         } else {
-
             $('#error-user').hide()
 
         }
@@ -98,7 +61,7 @@ $(function () {
         }
     }
 
-    //mobile number validation starts
+    //mobile number 
     function check_phone() {
         let $regexNumber = /^[6-9]\d{9}$/
         let numberValue = $("#phone").val()
@@ -110,9 +73,8 @@ $(function () {
             $("#error-phone").hide()
         }
     }
-    //mobile number validation ends
-    console.log(logged_in);
 
+    //Check password in register form
     function check_passw() {
         let password_length = $("#passw").val().length;
         if (password_length < 8) {
@@ -123,6 +85,7 @@ $(function () {
         }
     }
 
+    //Confirm password in register form
     function check_retype_password() {
         let password = $("#passw").val();
         let retype_password = $("#repass").val();
@@ -135,27 +98,50 @@ $(function () {
         }
     }
 
+    $("#username").keyup(function () {
+        check_user();
+    });
+    $("#pass").keyup(function () {
+        check_password();
+    });
+    $("#name").keyup(function () {
+        check_fname();
+    });
+    $("#email").keyup(function () {
+        check_email();
+    });
+    $("#phone").keyup(function () {
+        check_phone()
+    });
+    $("#passw").keyup(function () {
+        check_passw();
+    });
+    $("#repass").keyup(function () {
+        check_retype_password();
+    });
+
+
 
 
     $("#login_form").submit(function (e) {
         e.preventDefault()
 
-        error_username = false;
+        error_user = false;
         error_password = false;
 
-        check_username();
+        check_user();
         check_password();
 
-        if (error_username === false && error_password === false) {
+        if (error_user === false && error_password === false) {
 
-            let username = $("#username").val()
+            let user = $("#username").val()
             let password = $("#pass").val()
             exprss = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/
             const myUrl = new URL('http://localhost:3000/users/')
             if ($("#username").val().match(exprss)) {
-                myUrl.searchParams.set("email", username)
+                myUrl.searchParams.set("email", user)
             } else {
-                myUrl.searchParams.set("mobile", username)
+                myUrl.searchParams.set("mobile", user)
             }
             myUrl.searchParams.set("password", btoa(password))
             myUrl.searchParams.get("name")
@@ -170,19 +156,21 @@ $(function () {
                 dataType: 'json',
                 success: function (result) {
                     if (result.length != 0) {
+                        var id = result[0].id;
                         let name1 = result[0].name;
-                        localStorage.setItem('name', name1); console.log(name1);
-                        console.log("DOneeeee"); alert("Logged in as " + name1);
-                        location.href = "./ui/languagepage.html";
+                        sessionStorage.setItem('name', name1);
+                        sessionStorage.setItem('id', id);
+                        console.log("Logged in as " + name1);
+                        location.href = "./ui/home.html";
                         console.log("Hello");
                     } else {
-                        alert("Wrong credentials!! ");
+                        $('#error-login').show();
                     }
                 }
             });
 
         } else {
-            alert("Please Fill the form Correctly");
+            $('#error-login').show();
         }
     })
 
@@ -221,7 +209,7 @@ $(function () {
                 }
             })
         } else {
-            alert("Please Fill the form Correctly");
+            $('#error-reg').show();
             return false;
         }
 
