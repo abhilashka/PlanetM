@@ -1,4 +1,4 @@
-var token = `BQD7vRIeBBsNdoYuz6ARF8XsQCQpk85Huu-k_Zw0D1a7Tlrj38Hcly0YbfS1zaKqswhA-2KwkSUctT7Rdx1d6bNFcoCs5QCpKm7BeLEH_GkmDwsuNiVZAwc3dOrNwAixubxL-k5QHHGA-cfL_j_P-161Ba9xLDT43bHofjOL6hd4DHngKvDUURqPDSx2ObNoGvm9lOnS_JbFsstRqhtKJSMENN0mLVU2JfHlkE3DQG93TH5mrCl3YeZJ9kux7cVppESwChMA1bWdC8qjDoob1aGisMLYlD3HOg6dj4kJDILn`;
+var token = `BQDvYBADzJ6KqlyHebBzcQ4I1Y0ENWg_yI234OWhX2abE0XPnUsQVCota0H6-oPpo55KtCerz7MKCxVERpN7J7jt1sD2Cyf-zHLzcEI3kTc27atAdufYPpcsF3_9KzdD2HUuLo4TE-zVn5t9GHodd2bPfmUEHDBrVw00aR_c5QUAo0eAJLV_T_p-j8FGn4SRazmaB0emtgEmEl1o-OArX5JMjGS4-6rVG4USfoVbX0cy02HYPulNJ0TzJoqcI-B0n90HZ13jnYTEDNnKOkr2GIvyKVarbHjhF6kQ34PsuTqA`;
 
 $(function () {
     var $songs = $('#songs');
@@ -90,11 +90,11 @@ $("body").on('click', '.playlist-list', function () {
                 let duration = millisToMinutesAndSeconds(`${song.track.duration_ms}`)
                 $tracks.append(
                     `
-                    <tr class="resource-box">
+                    <tr class="resource-box" >
                     <td scope="row">${index}</td>
                     <td  >
                     <img src="${song.track.album.images[1].url}"  style="width:40px; height:40px; border-radius:50% "></img>
-                     <a href="#" id= ${song.track.preview_url} onclick="playsong(this)">${song.track.name} </a>  ,    <span style="color:rgb(75, 74, 74); font-style: italic;">  ${song.track.artists[0].name}</span> </td>
+                     <span class="trackdetailsspan" id= "${song.track.preview_url}" onclick="playsong(this)" track-img="${song.track.album.images[1].url}" track-name="${song.track.name}"  track-artist="${song.track.artists[0].name}">${song.track.name}  </span>  ,    <span style="color:rgb(75, 74, 74); font-style: italic;">  ${song.track.artists[0].name}</span> </td>
                     <td>${duration}</td>
                     </tr> 
                     `
