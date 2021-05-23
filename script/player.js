@@ -36,7 +36,11 @@ function playTrack(d) {
     // Play the loaded track
 
     if (sessionStorage.getItem("name") === null) {
-        document.href = "../index.html"
+        if (window.location.href != "file:///Users/abhilash/Desktop/PlanetM/index.html") {
+            location.href = "../index.html"
+        }
+       
+
         alert("Please Login")
     }
     else {
