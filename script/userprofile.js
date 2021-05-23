@@ -14,6 +14,7 @@ $(document).ready(function () {
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     var fname = /^[a-zA-Z ]*$/;
     var mob = /^[1-9]{1}[0-9]{9}$/;
+    //criteria for the fields
 
     var emailaddressVal = $("#url").val();
     if (emailaddressVal == "") {

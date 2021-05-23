@@ -78,7 +78,7 @@ function logout() {
 }
 
 function profile() {
-    location.href = "./ui/userprofile.html";
+    location.href = "./userprofile.html";
 
 }
 
