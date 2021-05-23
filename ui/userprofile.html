@@ -6,133 +6,17 @@
 
     <meta charset="utf-8">
 
-      <title>Profile settings</title>
+      <title>PROFILE SETTINGS</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-    <script defer src="../script/userprofile.js"></script>
+    <script defer src="./js/userprofile.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-    <style type="text/css">
-
-
-
-      body{
-
-    margin-top:20px;
-
-    color: #f3eaea;
-
-    text-align: left;
-
-    background-image:url("../assests//images/black.jpg");
-
-}
-
-.main-body {
-
-    padding: 15px;
-
-}
-
-
-.nav-link {
-
-    color: #16d810;
-
-}
-
-.card {
-
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
-
-}
-
-
-.card {
-
-
-    position: relative;
-
-    display: flex;
-
-    flex-direction: column;
-
-    min-width: 0;
-
-    word-wrap: break-word;
-
-    background-color: rgb(32, 25, 25);
-
-    background-clip: border-box;
-
-    border: 0 solid rgba(41, 33, 33, 0.125);
-
-    border-radius: .25rem;
-
-}
-
-
-.card-body {
-
-    flex: 1 1 auto;
-
-    min-height: 1px;
-
-    padding: 1rem;
-
-}
-
-
-.gutters-sm {
-
-    margin-right: -8px;
-
-    margin-left: -8px;
-
-}
-
-
-.gutters-sm>.col, .gutters-sm>[class*=col-] {
-
-    padding-right: 8px;
-
-    padding-left: 8px;
-
-}
-
-.mb-3, .my-3 {
-
-    margin-bottom: 1rem!important;
-
-}
-
-
-.bg-gray-300 {
-
-    background-color: #e2e8f0;
-
-}
-
-.h-100 {
-
-    height: 100%!important;
-
-}
-
-.shadow-none {
-
-    box-shadow: none!important;
-
-}
-
-
-
-    </style>
+    
 
 </head>
 
@@ -280,7 +164,7 @@
 
 
 
-                  <button type="submit" class="btn btn-danger" id="submit">Update Profile</button>
+                  <button type="button" class="btn btn-danger" id="submit">Update Profile</button>
 
                   <button type="reset" class="btn btn-danger">Reset Changes</button>
 
@@ -306,8 +190,8 @@
     <div class="upload-options">
       <label>
         <input type="file" class="image-upload" accept="image/*" />
-        <input type="submit" onclick="myfunction()">
-       
+        <input type="button" onclick="myfunction()">
+
       </label>
     </div>
 
@@ -348,7 +232,7 @@
                     <div class="form-group">
                     <label for="fullName">New password</label>
 
-                    <input type="password" id="pwd"  class="form-control mt-1" placeholder="Enter New password">
+                    <input type="password" id="pwd" minlength="8" class="form-control mt-1" placeholder="Enter New password">
                   </div>
                   <div id="showErrorPwd"></div>
 
@@ -356,7 +240,7 @@
                   <div class="form-group">
                     <label for="fullName">Confirm password</label>
 
-                    <input type="password" id="cpwd"   class="form-control mt-1" placeholder="Confirm new password">
+                    <input type="password" id="cpwd" minlength="8"  class="form-control mt-1" placeholder="Confirm new password">
 
                   </div>
                   <div id="showErrorcPwd"></div>
@@ -404,7 +288,7 @@
 
                                 </li>
 
-                                
+
 
                             </ul>
 
@@ -436,7 +320,7 @@
 
 
 
-                                <button type="submit" class="btn btn-submit btn-danger w-75">Submit</button>
+                                <button type="button" class="btn btn-submit btn-danger w-75">Submit</button>
 
                             </form>
 
@@ -486,7 +370,7 @@
 
 
 
-                              <button type="submit" class="btn btn-submit btn-danger w-75">Submit</button>
+                              <button type="button" class="btn btn-submit btn-danger w-75">Submit</button>
 
                           </form>
 
@@ -514,7 +398,8 @@
 
     </div>
 
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
@@ -527,6 +412,3 @@
 </body>
 
 </html>
-
-
-<!--test-->>

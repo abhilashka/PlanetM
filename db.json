@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "name": "Anjali Walke",
+      "contact": "9977146722",
+      "email": "aw@gmail.com",
+      "id": 1,
+      "password": "anjali123"
+    }
+  ]
+}
