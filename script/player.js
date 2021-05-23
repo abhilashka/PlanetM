@@ -35,39 +35,45 @@ function playpauseTrack(d) {
 function playTrack(d) {
     // Play the loaded track
 
-    curr_track = new Audio(d.id)
-    curr_track.play();
-    isPlaying = true;
+    if (sessionStorage.getItem("name") === null) {
+        document.href = "../index.html"
+        alert("Please Login")
+    }
+    else {
+        curr_track = new Audio(d.id)
+        curr_track.play();
+        isPlaying = true;
 
-    // Replace icon with the pause icon
-    // playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
-    $('#pause').show()
-    $('#play').hide()
-
-    $(function () {
-        var $trackimage = $('#trackimage');
-        var $trackdetails = $('#trackdetails');
-        trackimage.innerHTML = `<img src="${d.img}" alt="img">`
-        trackdetails.innerHTML = `<marquee>${d.name}, ${d.artist}</marquee>`
-
-
-    })
-
-
-    $('#play').click(function () {
-        $('#play').hide()
+        // Replace icon with the pause icon
+        // playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
         $('#pause').show()
-        curr_track.play()
-    })
+        $('#play').hide()
 
-    $('#pause').click(function () {
-        $('#pause').hide()
+        $(function () {
+            var $trackimage = $('#trackimage');
+            var $trackdetails = $('#trackdetails');
+            trackimage.innerHTML = `<img src="${d.img}" alt="img">`
+            trackdetails.innerHTML = `<marquee>${d.name}, ${d.artist}</marquee>`
 
-        $('#play').show()
 
-        pauseTrack(track_details)
+        })
 
-    })
+
+        $('#play').click(function () {
+            $('#play').hide()
+            $('#pause').show()
+            curr_track.play()
+        })
+
+        $('#pause').click(function () {
+            $('#pause').hide()
+
+            $('#play').show()
+
+            pauseTrack(track_details)
+
+        })
+    }
 
 }
 

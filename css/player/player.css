@@ -9,6 +9,7 @@
   bottom: 0;
   width: 100%;
   background-color: #181818;
+  border-top: 0.01px solid #65d36e;
 }
 
 .player .player-item .track-image {
@@ -20,6 +21,7 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  border: 0.03px solid #65d36e;
 }
 
 .player .player-control {

@@ -7,7 +7,10 @@
   bottom: 0;
   width: 100%;
   background-color: rgb(24, 24, 24);
+  border-top: 0.01px solid #65d36e;
 
+  //   border-top-style:  solid;
+  //   border-top-color:
   .player-item {
     .track-image {
       padding-left: 80px;
@@ -16,6 +19,7 @@
         width: 70px;
         height: 70px;
         border-radius: 50%;
+        border: 0.03px solid #65d36e;
       }
     }
   }
