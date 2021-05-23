@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  let userId = 1; // user id of logged in user
+  let userId = sessionStorage.getItem("id"); // user id of logged in user
 
   $.getJSON("http://localhost:3000/users/" + userId, function (data) {
     $("#fullName").val(data.name);
