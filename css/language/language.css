@@ -6,6 +6,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: black;
+  color: white;
 }
 
 .form-inline {
@@ -23,9 +29,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 400px;
+  height: 80px;
   background-color: black;
   color: white;
+  position: fixed;
+  top: 70px;
+  width: 100%;
 }
 
 .menu-list .menu-item {
@@ -37,7 +46,10 @@
 }
 
 .menu-list .menu-item h1 {
-  font-size: 50px;
+  font-size: 25px;
+  position: relative;
+  top: 14px;
+  right: -39px;
 }
 
 .menu-list .menu-item ul {
@@ -49,7 +61,7 @@
 
 .menu-list .menu-item ul li a {
   color: white;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .menu-list .menu-item ul li .dropdown-menu .dropdown-item {
@@ -63,5 +75,19 @@
 
 body {
   background-color: black;
+}
+
+.img-fluid {
+  width: 200px;
+  height: 200px;
+}
+
+.resource-box {
+  margin: 20px;
+}
+
+.song-title {
+  width: 200px;
+  height: auto;
 }
 /*# sourceMappingURL=language.css.map */

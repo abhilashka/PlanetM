@@ -13,17 +13,17 @@ let ajax1 = $.ajax({
     let products = "";
     $.each(data, function (i, v) {
       products += `
-                <div class="resource-box">
-                <div id=${v.url}>
+                <div class="resource-box"  >
+                <div id="${v.url}" onclick="playsong(this)">
                 <div class="song-image">
                 <img class="img-fluid" src=${v.img} />
                 </div>
                 <div class="song-title">
-                     <strong><span>${v.name}</span></strong>
-                     <p>${v.id}</p>
+                     <strong><span class="title">${v.name}</span></strong>
                  </div>
                  </div>
                  </div>
+                 
             `
 
     })
@@ -53,7 +53,7 @@ $("#searchmusic").on("keyup", function () {
 
 $("body").on('click', '.resource-box', function () {
   let songurl = $(this).attr('id');
-  alert("Played : " + songurl);
+  // alert("Played : " + songurl);
 });
 
 // });   
@@ -94,7 +94,7 @@ $(document).ready(function () {
 
 $(".dropdown-menu a").on("click", function () {
   var ak = $(this).attr("id");
-  alert(ak);
+
 
 
 
@@ -127,15 +127,17 @@ $(".dropdown-menu a").on("click", function () {
 
 
         audios += `
-           <div id="${v.url}" value="${v.language}" class="resource-box">
-           <div class="song-image">
-           <img class="img-fluid" src=${v.img} />
-           </div>
-           <div class="song-title">
-             <strong><span>${v.name}</span></strong>
-             <p>${v.id}</p>
-            </div>
-            </div>
+          
+        <div id="${v.url}" value="${v.language}" class="resource-box" onclick="playsong(this)" >
+        <div class="song-image">
+        <img class="img-fluid"  src=${v.img} />
+        </div>
+        <div class="song-title">
+          <strong><span class="title">${v.name}</span></strong>
+ 
+         </div>
+         </div>
+
 
            `;
       });
@@ -158,3 +160,5 @@ $(".dropdown-menu a").on("click", function () {
 
 
 
+
+/* */

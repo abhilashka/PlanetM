@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/language.css">
     <link rel="stylesheet" href="../css/header/header.css">
+    <link rel="stylesheet" href="../css/container/container.css">
+    <link rel="stylesheet" href="../css/middle/middle.css">
 
 
 
@@ -45,8 +47,20 @@
             font-family: myfont;
         }
 
-        html {
-            background-color: white;
+        body {
+            background-color: black;
+        }
+
+
+
+
+        a {
+            color: white
+        }
+
+        a:hover {
+            color: rgb(101, 211, 110);
+            ;
         }
     </style>
 
@@ -79,7 +93,7 @@
                     <a href="./discover.html">Explore</a>
                 </div>
                 <div class="main-menu-item">
-                    <a href="./playlist.html">Library</a>
+                    <a href="./playlist.html">Playlist</a>
                 </div>
                 <div class="main-menu-item" onclick=" showme()">
                     Search
@@ -187,41 +201,61 @@
 
 
 
+    <div class="container1">
+
+        <div class="row1 container-headline">
+            <span class="title"> New Realese</span>
+            <span class="sub-title">SEE ALL </span>
+        </div>
+        <div class="row1" id="songs">
+
+        </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="main-content">
-        <div class="title-container"></div>
-        <p class="library-sub-title1">Trending Now</p>
     </div>
-    <div class="displaysong">
-        <div class="inside-main-content">
-            <!--Songs are being displayed here-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container1">
+        <div class="row1 container-headline">
+            <span class="title"> English</span>
+            <span class="sub-title">SEE ALL </span>
+        </div>
+        <div class="row1" id="english">
+        </div>
+    </div>
+
+
+    <div class="container1">
+        <div class="row1 container-headline">
+            <span class="title"> Marathi</span>
+            <span class="sub-title">SEE ALL </span>
+        </div>
+        <div class="row1" id="marathi">
         </div>
     </div>
 
 
 
-
-
-
-
-
-
+    <div class="container1">
+        <div class="row1 container-headline">
+            <span class="title"> Spanish</span>
+            <span class="sub-title">SEE ALL </span>
+        </div>
+        <div class="row1" id="spanish">
+        </div>
+    </div>
 
 
 

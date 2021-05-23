@@ -156,11 +156,11 @@ $(function () {
                 dataType: 'json',
                 success: function (result) {
                     if (result.length != 0) {
-                        var id=result[0].id;
+                        var id = result[0].id;
                         let name1 = result[0].name;
-                        sessionStorage.setItem('name', name1); 
+                        sessionStorage.setItem('name', name1);
                         sessionStorage.setItem('id', id);
-                        console.log("Logged in as "+name1);
+                        console.log("Logged in as " + name1);
                         location.href = "./ui/home.html";
                         console.log("Hello");
                     } else {
