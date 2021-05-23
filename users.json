@@ -69,6 +69,20 @@
       "mobile": "9873545454",
       "password": "MTIzNDU2Nzg5",
       "id": 10
+    },
+    {
+      "name": "new guy",
+      "email": "dude@gmail.com",
+      "mobile": "9874563211",
+      "password": "MTIzNDU2Nzg5",
+      "id": 11
+    },
+    {
+      "name": "cyrils",
+      "email": "dude9@gmail.com",
+      "mobile": "9874574521",
+      "password": "MTIzNDU2Nzg5",
+      "id": 12
     }
   ]
 }
