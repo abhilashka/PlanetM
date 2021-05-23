@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+      <title>PROFILE SETTINGS</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <script defer src="./js/userprofile.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    
+
+</head>
+
+<body>
+
+<div class="container">
+      <div class="row gutters-sm">
+
+        <div class="col-md-4 d-none d-md-block">
+
+          <div class="card">
+
+            <div class="card-body">
+
+
+              <nav class="nav flex-column nav-pills nav-gap-y-1">
+
+
+                <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user mr-2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Profile Information
+
+                </a>
+
+
+                <a href="#picture" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings mr-2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>Change Profile Picture
+
+                </a>
+
+
+                <a href="#security" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield mr-2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Security
+
+                </a>
+
+                  <a href="#contactus" data-toggle="tab" class="nav-link has-icon">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>Contact Us
+
+                </a></li>
+
+                <a href="#feedback" data-toggle="tab" class="nav-link has-icon">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>Feedback
+
+                </a></li>
+
+              </nav>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-8">
+
+          <div class="card">
+
+            <div class="card-header border-bottom mb-3 d-flex d-md-none">
+
+              <ul class="nav nav-tabs card-header-tabs nav-gap-x-1" role="tablist">
+
+                <li class="nav-item">
+
+                  <a href="#profile" data-toggle="tab" class="nav-link has-icon active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                  <a href="#picture" data-toggle="tab" class="nav-link has-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                  <a href="#security" data-toggle="tab" class="nav-link has-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                  <a href="#contactus" data-toggle="tab" class="nav-link has-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></a></li>
+
+
+
+                  <li class="nav-item">
+
+                    <a href="#feedback" data-toggle="tab" class="nav-link has-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"<i class="feather-message-square"></i>"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></a>
+
+                  </li>
+
+              </ul>
+
+            </div>
+
+
+            <div class="card-body tab-content">
+
+              <div class="tab-pane active" id="profile">
+
+                <h6>USER PROFILE INFORMATION</h6>
+
+                <hr>
+
+                <form>
+
+                  <div class="form-group">
+
+                    <label for="fullName">Full Name</label>
+
+                    <input type="text" class="form-control" id="fullName" aria-describedby="fullNameHelp" placeholder="Enter your fullname" required="true" >
+                      <p id="p1"></p>
+                    <small id="fullNameHelp" class="form-text text-muted"></small>
+
+
+                  </div>
+
+
+
+                  <div class="form-group">
+
+                    <label for="Email">Email</label>
+
+                    <input type="text" class="form-control" id="url" placeholder="Enter your email address" required="true">
+                    <p id="p2"></p>
+                  </div>
+
+
+                  <div class="form-group">
+
+                    <label for="Phone">Contact No</label>
+
+                    <input type="tel" class="form-control" id="number" placeholder="Enter your Contact no" required="true" >
+                    <p id="p3"></p>
+                  </div>
+
+
+
+                  <button type="button" class="btn btn-danger" id="submit">Update Profile</button>
+
+                  <button type="reset" class="btn btn-danger">Reset Changes</button>
+
+                </form>
+
+              </div>
+
+
+              <div class="tab-pane" id="picture">
+
+                <h6>CHANGE PROFILE PICTURE</h6>
+
+                <hr>
+
+                <form>
+
+                  <div class="form-group">
+
+                <h6>Image-upload with preview</h6>
+
+
+    <div class="js--image-preview"></div>
+    <div class="upload-options">
+      <label>
+        <input type="file" class="image-upload" accept="image/*" />
+        <input type="button" onclick="myfunction()">
+
+      </label>
+    </div>
+
+                  </div>
+
+                </form>
+
+                <form>
+
+                  <div class="form-group">
+
+
+
+                    <button class="btn btn-danger" type="button">UPLOAD PICTURE</button>
+
+                  </div>
+
+                </form>
+
+                  </div>
+
+
+              <div class="tab-pane" id="security">
+
+                <h6>CHANGE PASSWORD</h6>
+
+                <hr>
+
+                <form>
+
+                  <div class="form-group">
+
+                    <label for="fullName">Old password</label>
+
+                    <input type="password" class="form-control" id="opwd"  placeholder="Enter your old password">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="fullName">New password</label>
+
+                    <input type="password" id="pwd" minlength="8" class="form-control mt-1" placeholder="Enter New password">
+                  </div>
+                  <div id="showErrorPwd"></div>
+
+
+                  <div class="form-group">
+                    <label for="fullName">Confirm password</label>
+
+                    <input type="password" id="cpwd" minlength="8"  class="form-control mt-1" placeholder="Confirm new password">
+
+                  </div>
+                  <div id="showErrorcPwd"></div>
+
+                </form>
+
+                <form>
+
+                  <div class="form-group">
+
+
+
+                    <button class="btn btn-danger" type="button" id="changepass">SAVE</button>
+
+                  </div>
+
+                </form>
+
+                  </div>
+
+                  <div class="tab-pane" id="contactus">
+
+                    <h6>CONTACT US</h6>
+
+                    <hr>
+
+                    <form>
+
+                      <section class="resume-section p-4 p-lg-5 text-center" id="contact">
+
+                        <div class="my-auto">
+
+                            <ul class="fa-ul mb-4 ml-0">
+
+                                <li id="mail-address">
+
+
+                                    <i class="fas fa-envelope-open mr-2 contact-icons"></i>contact@planetm.in</a>
+
+                                </li>
+
+                                <li>
+
+                                    <i class="fas fa-mobile-alt mr-2 contact-icons"></i>+91 987654321
+
+                                </li>
+
+
+
+                            </ul>
+
+
+
+                            <p>
+
+                                ...or leave your message below, we'll be right back to you as soon as
+
+                                possible.
+
+                            </p>
+
+
+
+                            <form class="contact-form d-flex flex-column align-items-center" action="submit_1.html">
+
+
+
+
+
+                                <div class="form-group w-75">
+
+                                    <textarea class="form-control" type="text" placeholder="Message" rows="7" name="name"
+
+                                        required></textarea>
+
+                                </div>
+
+
+
+                                <button type="button" class="btn btn-submit btn-danger w-75">Submit</button>
+
+                            </form>
+
+
+                        </div>
+
+                    </section>
+
+                  </div>
+
+                </form>
+
+                <div class="tab-pane" id="feedback">
+
+                  <h6>FEEDBACK</h6>
+
+                  <hr>
+
+                  <form>
+
+                    <section class="resume-section p-4 p-lg-5 text-center" id="feedback">
+
+                      <div class="my-auto">
+
+
+                          <h5>
+
+                              Please leave your valueable feedback here
+
+                          </h5>
+
+
+
+                          <form class="contact-form d-flex flex-column align-items-center" action="submit_1.html">
+
+
+
+
+
+                              <div class="form-group w-75">
+
+                                  <textarea class="form-control" type="text" placeholder="Message" rows="7" name="name"
+
+                                      required></textarea>
+
+                              </div>
+
+
+
+                              <button type="button" class="btn btn-submit btn-danger w-75">Submit</button>
+
+                          </form>
+
+                      </div>
+
+                  </section>
+
+                </div>
+
+              </form>
+              </div>
+
+                </form>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+
+
+</script>
+
+</body>
+
+</html>
