@@ -1,6 +1,4 @@
-var token = `BQAmu4PV1Je9r2s3RV5-cUuOcghsu93Esy4yBfcefw1yVRso37noCaRH4VYjt4-YyC9DybwB3SCDnUC8hwFkczUXhaib0iBJDbvPDO9PrQUrFFeWqn3WUoNd3f30IbgJLz6ELjF3n5JLQwHvY8ATpjci0vW8XJsx_4LJUgfsFkO0KezPr2gyEkZcZgeJLTsTWBeRF0EwHCFzH-5oVV8PixsWPeBuNGEpd_ZS9fxYIJciHH42fi4TwY1Kq78VdpFhSySxkJW2RL--fG8UEIF-iUdESY-qs2IwDroX3CT_p0OR`;
-
-
+var token = `BQBD2n-pX2ZbvUpn64rrCoL0mey69Z7zLzqoD6IUCOdwJlhrkeCUSd_vNXvah6FoH_3Q9il0-HIpIZf-uF7r6yyVUnt6cPOdR0-J7YIg9aBUuhHOxROddcxBoYIav1u_ZFlwm442t9Z7EtJZN4nvpB9WgITl1p1nUUG6qd7OHqD7d6WLE7P-Gj07qEBZGFyFSy8K8FWGuZS2x8z0SM1o1XmXDO-ifXo3--bN3Q4d_noA04fMZ3LuxaB-z0IoFa2ReVdicnZ0pj63dDLAZhY_-mbbI9O3NyEvWKMa7pIMLIFP`;
 $(function () {
     var $songs = $('#songs');
     $.ajax({
@@ -141,9 +139,9 @@ $("body").on('click', '.playlist-list', function () {
                     `
                     <tr class="resource-box">
                     <td scope="row">${index}</td>
-                    <td>
-                    <img src="${song.track.album.images[1].url}" style="width:40px; height:40px; border-radius:50% "></img>
-                     <a href="">${song.track.name} </a>  ,    <span style="color:rgb(75, 74, 74); font-style: italic;">  ${song.track.artists[0].name}</span> </td>
+                    <td  >
+                    <img src="${song.track.album.images[1].url}"  style="width:40px; height:40px; border-radius:50% "></img>
+                     <a href="#" id= ${song.track.preview_url} onclick="playsong(this)">${song.track.name} </a>  ,    <span style="color:rgb(75, 74, 74); font-style: italic;">  ${song.track.artists[0].name}</span> </td>
                     <td>${duration}</td>
                     </tr> 
                     `
