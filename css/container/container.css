@@ -3,11 +3,12 @@
   display: grid;
   width: auto;
   height: auto;
-  padding: 130px;
+  padding: 10px;
   -ms-grid-rows: auto 1fr;
       grid-template-rows: auto 1fr;
   margin: 20px;
   color: white;
+  border: 1px solid gray;
 }
 
 .container1 .row1 {
