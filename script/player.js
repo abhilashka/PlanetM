@@ -158,12 +158,14 @@ function playsong(d) {
     }
     audioElement.play();
 
-    $('#play-pause').click(function () {
+ 
+
+}
+
+
+   $('#play-pause').click(function () {
 
         audioElement.pause()
 
 
     })
-
-}
-

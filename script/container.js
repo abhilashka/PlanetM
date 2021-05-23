@@ -25,8 +25,12 @@ $(function () {
         
                     <div class="card1-footer">
                         <div class="title">${song.name}</div>
-                        <div class="artist">${song.album_type} </div>
-                        <div class="album">${song.artists[0].name}</div>
+                        <div class="artist" style="color: grey; 
+    font-size: 12px;
+">${song.album_type} </div>
+                        <div class="album" style="color: grey; 
+    font-size: 12px;
+">${song.artists[0].name}</div>
         
                     </div>
                 </div>
@@ -73,7 +77,9 @@ $(function () {
         
                     <div class="card1-footer">
                         <div class="title">${song.name}</div>
-                        <div class="album">${song.artist}</div>
+                        <div class="album" style="color: grey; 
+    font-size: 12px;
+">${song.artist}</div>
         
                     </div>
                 </div>
@@ -99,7 +105,9 @@ $(function () {
         
                     <div class="card1-footer">
                         <div class="title">${song.name}</div>
-                        <div class="album">${song.artist}</div>
+                        <div class="album" style="color: grey; 
+    font-size: 12px;
+">${song.artist}</div>
         
                     </div>
                 </div>
@@ -124,7 +132,9 @@ $(function () {
             
                         <div class="card1-footer">
                             <div class="title">${song.name}</div>
-                            <div class="album">${song.artist}</div>
+                            <div class="album" style="color: grey; 
+    font-size: 12px;
+">${song.artist}</div>
             
                         </div>
                     </div>
@@ -150,7 +160,9 @@ $(function () {
             
                         <div class="card1-footer">
                             <div class="title">${song.name}</div>
-                            <div class="album">${song.artist}</div>
+                            <div class="album" style="color: grey; 
+    font-size: 12px;
+">${song.artist}</div>
             
                         </div>
                     </div>
