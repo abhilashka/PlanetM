@@ -1,15 +1,10 @@
 $(document).ready(function () {
-
     $('#menu-search').hide()
-
-
     $('.searchform').hide()
-
     if (sessionStorage.getItem('name') === null) {
         $('.btn-home-profile').hide()
         $('.btn-home-register').show()
         $('.btn-home-login').show()
-     
     }
     else {
         $('.btn-home-register').hide()
@@ -18,26 +13,18 @@ $(document).ready(function () {
         var profilename = sessionStorage.getItem('name')
         $('#dropdownMenu2').append(` ${profilename}`)
     }
-
-   
-
-
 })
 
 function myFunction(x) {
     if (x.matches) { // If media query matches
         $('#menu-symbol').show()
         $('#menu-item').hide()
-
         $('.logo-text').hide()
         $('.btn-home-register').hide()
-
     } else {
         $('#menu-item').show()
         $('#menu-symbol').hide()
         $('.logo-text').show()
-
-
     }
 }
 
@@ -48,7 +35,6 @@ x.addListener(myFunction) // Attach listener function on state changes
 
 function showme() {
     $('#menu-search').show()
-
 }
 
 function explore() {
