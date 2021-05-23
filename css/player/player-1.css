@@ -1,0 +1,31 @@
+.player {
+  color: #65d36e;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr 1fr;
+      grid-template-columns: 1fr 4fr 1fr;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#61645f), color-stop(#474c4b), color-stop(#323536), color-stop(#1f1f20), to(#070707));
+  background-image: linear-gradient(to bottom, #61645f, #474c4b, #323536, #1f1f20, #070707);
+}
+
+.player .player-control {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+}
+
+.player .player-control .player-icon {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+/*# sourceMappingURL=player-1.css.map */
