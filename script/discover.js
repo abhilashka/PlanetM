@@ -1,4 +1,4 @@
-var token = `BQDA9VNSntcnlLf4Hf-xtnSyIWlx9WA9uiNz-qDnyhZuPJfbLAd4m11GtnWc7ywb49oEYx6AHP70jJLGYXNcfU4ccuQpo8KEXm31fbco5TamD-WwG8GX7-f3WiomHYwSoArD9uSVmOWRyPUxrysD_vU8U6BAa49CWIPN-7__lvcEWpF83CTQTHLqEyLWeMLPHXwk9228DKspwMV-BJvNo-58KbetGtLgCk8rqAadTtFdWY_fH-5AGv8UoFqIF-Nc8rjTYT384jSDGnlGLq6v9QLiIv1bsF5qEpOr41TEP0wz`;
+var token = `BQBD2n-pX2ZbvUpn64rrCoL0mey69Z7zLzqoD6IUCOdwJlhrkeCUSd_vNXvah6FoH_3Q9il0-HIpIZf-uF7r6yyVUnt6cPOdR0-J7YIg9aBUuhHOxROddcxBoYIav1u_ZFlwm442t9Z7EtJZN4nvpB9WgITl1p1nUUG6qd7OHqD7d6WLE7P-Gj07qEBZGFyFSy8K8FWGuZS2x8z0SM1o1XmXDO-ifXo3--bN3Q4d_noA04fMZ3LuxaB-z0IoFa2ReVdicnZ0pj63dDLAZhY_-mbbI9O3NyEvWKMa7pIMLIFP`;
 $(function () {
     var $songs = $('#songs');
     $.ajax({
