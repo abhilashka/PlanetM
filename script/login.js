@@ -161,7 +161,7 @@ $(function () {
                         sessionStorage.setItem('name', name1);
                         sessionStorage.setItem('id', id);
                         console.log("Logged in as " + name1);
-                        location.href = "./ui/home.html";
+                        location.href = "./ui/languagepage.html";
                         console.log("Hello");
                     } else {
                         $('#error-login').show();
