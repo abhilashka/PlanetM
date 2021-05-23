@@ -94,7 +94,9 @@ $("body").on('click', '.playlist-list', function () {
                     <td scope="row">${index}</td>
                     <td  >
                     <img src="${song.track.album.images[1].url}"  style="width:40px; height:40px; border-radius:50% "></img>
-                     <a href="#" id= ${song.track.preview_url} onclick="playsong(this)">${song.track.name} </a>  ,    <span style="color:rgb(75, 74, 74); font-style: italic;">  ${song.track.artists[0].name}</span> </td>
+                     <a href="#" id= ${song.track.preview_url} onclick="playsong(this)">${song.track.name} </a>  ,    
+                     <span style="color:rgb(75, 74, 74); font-style: italic;">  ${song.track.artists[0].name}</span> 
+                     </td>
                     <td>${duration}</td>
                     </tr> 
                     `

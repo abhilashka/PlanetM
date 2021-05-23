@@ -11,7 +11,7 @@ $(function () {
                     ` <div class="card1 resource-box">
                     <div class="card1-body">
                         <div class="image-logo" style=" background-image:url(${song.images[0].url}); background-size: 600px 600px;">
-                            <img src="${song.images[0].url}" alt="">
+                            <img src="${song.images[0].url}" alt=""></img>
                         </div>
                     </div>
                     <div class="card1-footer">
@@ -44,15 +44,15 @@ $(function () {
                 if (song.language === "hindi") {
                     $hindi.append(
                         `<div class="card1 resource-box" id="${song.url}" onclick="playsong(this)">
-                        <div class="card1-body">
-                            <div class="image-logo" style="   background-image:url(${song.img});  background-size: 600px 600px;">
-                                <img src="${song.img}" alt="">
+                           <div class="card1-body">
+                              <div class="image-logo" style="   background-image:url(${song.img});  background-size: 600px 600px;">
+                                <img src="${song.img}" alt=""></img>
+                              </div>
+                             </div>
+                           <div class="card1-footer">
+                               <div class="title">${song.name}</div>
+                               <div class="album">${song.artist}</div>
                             </div>
-                        </div>
-                        <div class="card1-footer">
-                            <div class="title">${song.name}</div>
-                            <div class="album">${song.artist}</div>
-                        </div>
                         </div>
                     `)
 

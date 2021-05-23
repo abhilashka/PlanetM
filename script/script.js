@@ -6,14 +6,14 @@ let ajax1 = $.ajax({
   dataType: "json",
   async: true,
   success: function (data) {
-  console.log("From the first requests");
-  let products = "";
-  $.each(data, function (i, v) {
+    console.log("From the first requests");
+    let products = "";
+    $.each(data, function (i, v) {
       products += `
                 <div class="resource-box" >
                 <div id=${v.url}>
-                <div class="song-image">
-                <img class="img-fluid" src=${v.img} />
+                     <div class="song-image">
+                     <img class="img-fluid" src=${v.img} />
                 </div>
                 <div class="song-title">
                      <strong><span class="title">${v.name}</span></strong>
@@ -24,7 +24,7 @@ let ajax1 = $.ajax({
             `
 
     })
-  $(".inside-main-content").append(products)
+    $(".inside-main-content").append(products)
   },
   error: function () {
     console.log("not able to process request");
@@ -38,7 +38,7 @@ $("#searchmusic").on("keyup", function () {
   let key = $(this).val().toLowerCase();
   console.log(key)
   $(".resource-box").filter(function () {
-  $(this).toggle($(this).text().toLowerCase().indexOf(key) > -1);
+    $(this).toggle($(this).text().toLowerCase().indexOf(key) > -1);
   });
 });
 
@@ -48,7 +48,7 @@ $("body").on('click', '.resource-box', function () {
   let songurl = $(this).attr('id');
   // alert("Played : " + songurl);
 });
- 
+
 
 //After clicked on search button
 //  $(document).ready(function() {
@@ -73,7 +73,7 @@ $("body").on('click', '.resource-box', function () {
 
 
 $(document).ready(function () {
-    $(".xyz").click(function () {
+  $(".xyz").click(function () {
     console.log(`click me `)
     $("#searchmusic").toggle();
   });
@@ -97,7 +97,7 @@ $(".dropdown-menu a").on("click", function () {
       console.log(data);
       let audios = "";
       $.each(data, function (i, v) {
-       audios += `   
+        audios += `   
         <div id="${v.url}" value="${v.language}" class="resource-box">
         <div class="song-image">
         <img class="img-fluid"  src=${v.img} />

@@ -5,18 +5,26 @@ function playsong(d) {
     console.log(d.getAttribute("id"))
 
 
-    var audioElement = document.createElement('audio');
-
-    audioElement.setAttribute('src', d.getAttribute("id"));
+    var audioElement = new Audio(d.getAttribute("id"))
 
 
 
-    if (audioElement.play()) {
-        audioElement.pause()
+
+    d.setAttribute("track", "playing");
+
+
+
+    if ($('div').hasClass('play')) {
+        $('div').removeClass('play');
+        audioElement.pause();
+
+    } else {
+        $('div').addClass('play');
+        audioElement.play();
 
     }
 
-    audioElement.play();
+
 
 
     $('#play-pause').click(function () {
