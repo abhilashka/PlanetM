@@ -52,7 +52,7 @@ function playTrack(d) {
         $(function () {
             var $trackimage = $('#trackimage');
             var $trackdetails = $('#trackdetails');
-            trackimage.innerHTML = `<img src="${d.img}" alt="img">`
+            trackimage.innerHTML = `<img class="rotate" src="${d.img}" alt="img">`
             trackdetails.innerHTML = `<marquee>${d.name}, ${d.artist}</marquee>`
 
 

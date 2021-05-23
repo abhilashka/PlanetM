@@ -15,11 +15,14 @@
     .track-image {
       padding-left: 80px;
       padding-top: 10px;
+
       img {
         width: 70px;
         height: 70px;
         border-radius: 50%;
-        border: 0.03px solid #65d36e;
+        -webkit-box-shadow: -1px 6px 63px -18px rgba(245, 242, 245, 1);
+        -moz-box-shadow: -1px 6px 63px -18px rgba(245, 242, 245, 1);
+        box-shadow: -1px 6px 63px -18px rgba(245, 242, 245, 1);
       }
     }
   }
@@ -64,5 +67,17 @@
     fill: #65d36e;
 
     border-radius: 50%;
+  }
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
   }
 }
