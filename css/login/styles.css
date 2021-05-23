@@ -70,6 +70,8 @@ body .modal .modal-content label {
   font-weight: bold;
 }
 
+body .modal .modal-content .modal-body #error-phone-reg,
+body .modal .modal-content .modal-body #error-email-reg,
 body .modal .modal-content .modal-body #error-user,
 body .modal .modal-content .modal-body #error-password,
 body .modal .modal-content .modal-body #error-name,
