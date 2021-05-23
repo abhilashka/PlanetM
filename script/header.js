@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     $('.searchform').hide()
 
-    if (localStorage.getItem('name') === null) {
+    if (sessionStorage.getItem('name') === null) {
         $('.btn-home-profile').hide()
         $('.btn-home-register').show()
         $('.btn-home-login').show()
@@ -15,7 +15,7 @@ $(document).ready(function () {
         $('.btn-home-register').hide()
         $('.btn-home-login').hide()
         $('.btn-home-profile').show()
-        var profilename = localStorage.getItem('name')
+        var profilename = sessionStorage.getItem('name')
         $('#dropdownMenu2').append(` ${profilename}`)
     }
 
@@ -72,7 +72,9 @@ function search() {
 
 
 function logout() {
-    localStorage.removeItem('name')
+    sessionStorage.removeItem('name');
+
+    sessionStorage.removeItem('id');
     location.href = "../index.html";
 
 }
