@@ -14,7 +14,7 @@ let ajax1 = $.ajax({
     $.each(data, function (i, v) {
       products += `
                 <div class="resource-box"  >
-                <div id="${v.url}" onclick="playsong()">
+                <div id="${v.url}" onclick="playsong(this)">
                 <div class="song-image">
                 <img class="img-fluid" src=${v.img} />
                 </div>
@@ -128,7 +128,7 @@ $(".dropdown-menu a").on("click", function () {
 
         audios += `
           
-        <div id="${v.url}" value="${v.language}" class="resource-box" onclick="playsong()" >
+        <div id="${v.url}" value="${v.language}" class="resource-box" onclick="playsong(this)" >
         <div class="song-image">
         <img class="img-fluid"  src=${v.img} />
         </div>
