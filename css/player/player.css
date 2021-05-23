@@ -1,0 +1,97 @@
+.player {
+  color: #65d36e;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr 1fr;
+      grid-template-columns: 1fr 4fr 1fr;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #181818;
+  border-top: 0.01px solid #65d36e;
+}
+
+.player .player-item .track-image {
+  padding-left: 80px;
+  padding-top: 10px;
+}
+
+.player .player-item .track-image img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  -webkit-box-shadow: -1px 6px 63px -18px #f5f2f5;
+  box-shadow: -1px 6px 63px -18px #f5f2f5;
+}
+
+.player .player-control {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+}
+
+.player .player-control .player-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
+  cursor: pointer;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: justify;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.player .player-control .player-icon .player-btn svg:hover {
+  fill: #65d36e;
+}
+
+.cMigZB {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+
+#play:hover {
+  fill: #65d36e;
+  border-radius: 50%;
+}
+
+#pause:hover {
+  fill: #65d36e;
+  border-radius: 50%;
+}
+
+.rotate {
+  -webkit-animation: rotation 8s infinite linear;
+          animation: rotation 8s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+/*# sourceMappingURL=player.css.map */

@@ -43,7 +43,7 @@ $(function () {
             $.each(songs, function (i, song) {
                 if (song.language === "hindi") {
                     $hindi.append(
-                        `<div class="card1 resource-box" id="${song.url}" onclick="playsong(this)">
+                        `<div class="card1 resource-box" id="${song.url}" onclick="playsong(this)" track-img="${song.img}" track-name="${song.name}"  track-artist="${song.artist}">
                         <div class="card1-body">
                             <div class="image-logo" style="   background-image:url(${song.img});  background-size: 600px 600px;">
                                 <img src="${song.img}" alt="">
@@ -61,7 +61,7 @@ $(function () {
 
                 if (song.language === "english") {
                     $english.append(
-                        `<div class="card1 resource-box" id="${song.url}" onclick="playsong(this)">
+                        `<div class="card1 resource-box" id="${song.url}" onclick="playsong(this)" track-img="${song.img}" track-name="${song.name}"  track-artist="${song.artist}">
                         <div class="card1-body">
                             <div class="image-logo" style="   background-image:url(${song.img});  background-size: 600px 600px;">
                                 <img src="${song.img}" alt="">
@@ -78,7 +78,7 @@ $(function () {
 
                 if (song.language === "marathi") {
                     $marathi.append(
-                        `<div class="card1 resource-box" id="${song.url}" onclick="playsong(this)">
+                        `<div class="card1 resource-box" id="${song.url}" onclick="playsong(this)" track-img="${song.img}" track-name="${song.name}"  track-artist="${song.artist}">
                         <div class="card1-body">
                             <div class="image-logo" style="   background-image:url(${song.img});  background-size: 600px 600px;">
                                 <img src="${song.img}" alt="">
@@ -96,7 +96,7 @@ $(function () {
 
                 if (song.language === "spanish") {
                     $spanish.append(
-                        `<div class="card1 resource-box" id="${song.url}" onclick="playsong(this)">
+                        `<div class="card1 resource-box" id="${song.url}" onclick="playsong(this)" track-img="${song.img}" track-name="${song.name}"  track-artist="${song.artist}">
                         <div class="card1-body">
                             <div class="image-logo" style="   background-image:url(${song.img});  background-size: 600px 600px;">
                                 <img src="${song.img}" alt="">

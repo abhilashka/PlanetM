@@ -53,4 +53,9 @@ html {
 .card-text {
   color: #646262;
 }
+
+.trackdetailsspan:hover {
+  cursor: pointer;
+  color: #65d36e;
+}
 /*# sourceMappingURL=discover.css.map */

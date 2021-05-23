@@ -18,7 +18,7 @@
     width: 200px;
     height: 200px;
     margin: 10px;
-padding: 10px;
+    padding: 10px;
     cursor: pointer;
     span {
       margin-left: 10px;
@@ -44,6 +44,13 @@ html {
   background-color: black;
 }
 
-.card-text{
+.card-text {
   color: rgb(100, 98, 98);
+}
+
+.trackdetailsspan {
+  &:hover {
+    cursor: pointer;
+    color: #65d36e;
+  }
 }
