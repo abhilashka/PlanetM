@@ -20,6 +20,7 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./css/login/styles.css">
     <script defer src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="./css//player/player.css">
     <style>
         @font-face {
             font-family: myfont;
@@ -308,7 +309,25 @@
     <!-- main ended -->
 
 
-
+    <div class="player">
+        <div class="player-item">
+            <div class="track-image">track-image</div>
+            <div class="track-details">track-details</div>
+        </div>
+        <div class="player-item player-control">
+            <div class="player-icon">
+                <div class="player-btn">reapeat</div>
+                <div class="player-btn">pre</div>
+                <div class="player-btn" id="play-pause">play/pause</div>
+                <div class="player-btn">next</div>
+                <div class="player-btn">shuffle</div>
+            </div>
+            <div class="player-progress">player-progress</div>
+        </div>
+        <div class="player-item">
+            <div class="player-sound">player-sound"</div>
+        </div>
+    </div>
 
 
 
@@ -334,6 +353,7 @@
     <script src="./script/header.js"></script>
 
     <script src="./script/login.js"></script>
+    <script src="./script/player.js"></script>
 
 </body>
 
