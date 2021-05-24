@@ -176,44 +176,87 @@ $(function () {
 
 
 
+
+
     $("#registration_form").submit(function (e) {
-        e.preventDefault()
+        e.preventDefault();
 
         error_fname = false;
         error_email = false;
-        error_number = false
+        error_number = false;
         error_passw = false;
         error_retype_password = false;
 
+        // Validating all parameters individually
         check_fname();
         check_email();
         check_phone();
         check_passw();
         check_retype_password();
 
-        if (error_fname === false && error_email === false && error_number === false && error_passw === false && error_retype_password === false) {
+        if (
+            error_fname === false &&
+            error_email === false &&
+            error_number === false &&
+            error_passw === false &&
+            error_retype_password === false
+        ) {
+            var email = $("#email").val();
+            var mobile = $("#phone").val();
+
             let users = {
                 name: $("#name").val(),
                 email: $("#email").val(),
                 mobile: $("#phone").val(),
-                password: btoa($("#passw").val())
-            }
-
+                password: btoa($("#passw").val()),
+            };
             $.ajax({
-                type: "POST",
+                type: "GET",
                 dataType: "json",
-                url: "http://localhost:3000/users",
-                data: users,
+                url: "http://localhost:3000/users?email=" + email,
+                async: false,
                 success: function (data) {
-                    console.log(data)
-                }
-            })
+                    console.log(data);
+
+                    //Check if email already exists
+                    if (data[0] == undefined) {
+                        $("#error-email-reg").hide();
+                        $("#error-phone-reg").hide();
+                        $.ajax({
+                            type: "GET",
+                            dataType: "json",
+                            url: "http://localhost:3000/users?mobile=" + mobile,
+                            async: false,
+                            success: function (data) {
+                                //Check if mobile number already exists
+                                if (data[0] == undefined) {
+                                    $.ajax({
+                                        type: "POST",
+                                        dataType: "json",
+                                        url: "http://localhost:3000/users",
+                                        data: users,
+                                        async: false,
+                                        success: function (data) {
+                                            console.log(data + "added");
+                                        },
+                                    });
+                                } else {
+                                    $("#error-phone-reg").show();
+                                }
+                            },
+                        });
+                    } else {
+                        $("#error-email-reg").show();
+                    }
+                },
+            });
         } else {
-            $('#error-reg').show();
+            $("#error-reg").show();
             return false;
         }
+    });
+});
 
-    })
 
-})
+
 

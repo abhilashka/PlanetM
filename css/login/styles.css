@@ -76,7 +76,9 @@ body .modal .modal-content .modal-body #error-name,
 body .modal .modal-content .modal-body #error-email,
 body .modal .modal-content .modal-body #error-phone,
 body .modal .modal-content .modal-body #error-reg-pass,
-body .modal .modal-content .modal-body #error-reg-confpass {
+body .modal .modal-content .modal-body #error-reg-confpass,
+body .modal .modal-content .modal-body #error-phone-reg,
+body .modal .modal-content .modal-body #error-email-reg {
   margin-top: 0.3rem;
   width: 100%;
   font-size: 1rem;
